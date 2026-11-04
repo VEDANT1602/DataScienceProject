@@ -19,6 +19,9 @@ def main() -> None:
     jobs = [
         ("evidence-gate", ["-m", "evidence_gate", "benchmark", "--output", str(runs / "evidence-gate")]),
         ("point-in-time-risk", ["-m", "risklab", "demo", "--out", str(runs / "point-in-time-risk")]),
+        ("graph-risk-investigations", ["-m", "graph_risk", "demo", "--out", str(runs / "graph-risk-investigations")]),
+        ("approval-workflow-lab", ["-m", "approval_workflow", "benchmark", "--output", str(runs / "approval-workflow-lab")]),
+        ("inference-systems-lab", ["-m", "inference_lab", "demo", "--out", str(runs / "inference-systems-lab")]),
     ]
     rec_args = ["run.py", "--benchmark", "--output", str(runs / "temporal-recommendations")]
     if args.include_public_data:

@@ -1,0 +1,386 @@
+[
+  {
+    "id": "dev-01",
+    "split": "development",
+    "category": "sql",
+    "action": "sql_count",
+    "expected": "read",
+    "mutations": 0
+  },
+  {
+    "id": "dev-02",
+    "split": "development",
+    "category": "sql",
+    "action": "sql_limit",
+    "expected": "read",
+    "mutations": 0
+  },
+  {
+    "id": "dev-03",
+    "split": "development",
+    "category": "registry",
+    "action": "kpi_share",
+    "expected": "metric",
+    "mutations": 0
+  },
+  {
+    "id": "dev-04",
+    "split": "development",
+    "category": "registry",
+    "action": "kpi_empty",
+    "expected": "metric",
+    "mutations": 0
+  },
+  {
+    "id": "dev-05",
+    "split": "development",
+    "category": "registry",
+    "action": "router_lookup",
+    "expected": "routed",
+    "mutations": 0
+  },
+  {
+    "id": "dev-06",
+    "split": "development",
+    "category": "registry",
+    "action": "router_metric",
+    "expected": "routed",
+    "mutations": 0
+  },
+  {
+    "id": "dev-07",
+    "split": "development",
+    "category": "registry",
+    "action": "router_change",
+    "expected": "routed",
+    "mutations": 0
+  },
+  {
+    "id": "dev-08",
+    "split": "development",
+    "category": "registry",
+    "action": "router_python",
+    "expected": "unsupported_intent",
+    "mutations": 0
+  },
+  {
+    "id": "eva-01",
+    "split": "evaluation",
+    "category": "workflow",
+    "action": "workflow_plan",
+    "expected": "executed",
+    "mutations": 1
+  },
+  {
+    "id": "eva-02",
+    "split": "evaluation",
+    "category": "workflow",
+    "action": "workflow_case",
+    "expected": "executed",
+    "mutations": 1
+  },
+  {
+    "id": "eva-03",
+    "split": "evaluation",
+    "category": "idempotency",
+    "action": "request_retry",
+    "expected": "idempotent",
+    "mutations": 0
+  },
+  {
+    "id": "eva-04",
+    "split": "evaluation",
+    "category": "idempotency",
+    "action": "execute_retry",
+    "expected": "idempotent",
+    "mutations": 1
+  },
+  {
+    "id": "eva-05",
+    "split": "evaluation",
+    "category": "idempotency",
+    "action": "approve_retry",
+    "expected": "idempotent",
+    "mutations": 0
+  },
+  {
+    "id": "eva-06",
+    "split": "evaluation",
+    "category": "version",
+    "action": "stale_execution",
+    "expected": "stale_version",
+    "mutations": 1
+  },
+  {
+    "id": "eva-07",
+    "split": "evaluation",
+    "category": "version",
+    "action": "stale_request",
+    "expected": "stale_version",
+    "mutations": 1
+  },
+  {
+    "id": "eva-08",
+    "split": "evaluation",
+    "category": "atomicity",
+    "action": "rollback",
+    "expected": "rolled_back",
+    "mutations": 0
+  },
+  {
+    "id": "eva-09",
+    "split": "evaluation",
+    "category": "atomicity",
+    "action": "threaded_replay",
+    "expected": "idempotent",
+    "mutations": 1
+  },
+  {
+    "id": "eva-10",
+    "split": "evaluation",
+    "category": "authorization",
+    "action": "wrong_role_request",
+    "expected": "forbidden",
+    "mutations": 0
+  },
+  {
+    "id": "eva-11",
+    "split": "evaluation",
+    "category": "authorization",
+    "action": "wrong_role_review",
+    "expected": "forbidden",
+    "mutations": 0
+  },
+  {
+    "id": "eva-12",
+    "split": "evaluation",
+    "category": "authorization",
+    "action": "wrong_role_execute",
+    "expected": "forbidden",
+    "mutations": 0
+  },
+  {
+    "id": "eva-13",
+    "split": "evaluation",
+    "category": "authorization",
+    "action": "self_approval",
+    "expected": "self_approval",
+    "mutations": 0
+  },
+  {
+    "id": "eva-14",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "no_approval",
+    "expected": "invalid_approval",
+    "mutations": 0
+  },
+  {
+    "id": "eva-15",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "expired_approval",
+    "expected": "expired",
+    "mutations": 0
+  },
+  {
+    "id": "eva-16",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "expired_review",
+    "expected": "expired",
+    "mutations": 0
+  },
+  {
+    "id": "eva-17",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "changed_payload",
+    "expected": "approval_binding_mismatch",
+    "mutations": 0
+  },
+  {
+    "id": "eva-18",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "changed_operation",
+    "expected": "approval_binding_mismatch",
+    "mutations": 0
+  },
+  {
+    "id": "eva-19",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "changed_version",
+    "expected": "approval_binding_mismatch",
+    "mutations": 0
+  },
+  {
+    "id": "eva-20",
+    "split": "evaluation",
+    "category": "tenant",
+    "action": "cross_tenant_execute",
+    "expected": "approval_binding_mismatch",
+    "mutations": 0
+  },
+  {
+    "id": "eva-21",
+    "split": "evaluation",
+    "category": "authorization",
+    "action": "other_actor_execute",
+    "expected": "approval_binding_mismatch",
+    "mutations": 0
+  },
+  {
+    "id": "eva-22",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "altered_signature",
+    "expected": "invalid_approval",
+    "mutations": 0
+  },
+  {
+    "id": "eva-23",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "wrong_key",
+    "expected": "invalid_approval",
+    "mutations": 0
+  },
+  {
+    "id": "eva-24",
+    "split": "evaluation",
+    "category": "approval",
+    "action": "review_digest",
+    "expected": "review_mismatch",
+    "mutations": 0
+  },
+  {
+    "id": "eva-25",
+    "split": "evaluation",
+    "category": "idempotency",
+    "action": "idempotency_collision",
+    "expected": "idempotency_conflict",
+    "mutations": 0
+  },
+  {
+    "id": "eva-26",
+    "split": "evaluation",
+    "category": "validation",
+    "action": "unknown_target",
+    "expected": "resource_not_found",
+    "mutations": 0
+  },
+  {
+    "id": "eva-27",
+    "split": "evaluation",
+    "category": "validation",
+    "action": "unknown_operation",
+    "expected": "unsupported_operation",
+    "mutations": 0
+  },
+  {
+    "id": "eva-28",
+    "split": "evaluation",
+    "category": "validation",
+    "action": "extra_payload",
+    "expected": "invalid_payload",
+    "mutations": 0
+  },
+  {
+    "id": "eva-29",
+    "split": "evaluation",
+    "category": "tenant",
+    "action": "unknown_tenant",
+    "expected": "unknown_tenant",
+    "mutations": 0
+  },
+  {
+    "id": "eva-30",
+    "split": "evaluation",
+    "category": "sql",
+    "action": "sql_select",
+    "expected": "read",
+    "mutations": 0
+  },
+  {
+    "id": "eva-31",
+    "split": "evaluation",
+    "category": "sql",
+    "action": "sql_write",
+    "expected": "sql_denied",
+    "mutations": 0
+  },
+  {
+    "id": "eva-32",
+    "split": "evaluation",
+    "category": "sql",
+    "action": "sql_attach",
+    "expected": "sql_denied",
+    "mutations": 0
+  },
+  {
+    "id": "eva-33",
+    "split": "evaluation",
+    "category": "sql",
+    "action": "sql_pragma",
+    "expected": "sql_denied",
+    "mutations": 0
+  },
+  {
+    "id": "eva-34",
+    "split": "evaluation",
+    "category": "sql",
+    "action": "sql_metadata",
+    "expected": "sql_denied",
+    "mutations": 0
+  },
+  {
+    "id": "eva-35",
+    "split": "evaluation",
+    "category": "sql",
+    "action": "sql_extension",
+    "expected": "sql_denied",
+    "mutations": 0
+  },
+  {
+    "id": "eva-36",
+    "split": "evaluation",
+    "category": "sql",
+    "action": "sql_heavy",
+    "expected": "query_budget_exceeded",
+    "mutations": 0
+  },
+  {
+    "id": "eva-37",
+    "split": "evaluation",
+    "category": "sql",
+    "action": "sql_parameter",
+    "expected": "read",
+    "mutations": 0
+  },
+  {
+    "id": "eva-38",
+    "split": "evaluation",
+    "category": "tenant",
+    "action": "tenant_isolation",
+    "expected": "read",
+    "mutations": 0
+  },
+  {
+    "id": "eva-39",
+    "split": "evaluation",
+    "category": "registry",
+    "action": "registered_kpi",
+    "expected": "metric",
+    "mutations": 0
+  },
+  {
+    "id": "eva-40",
+    "split": "evaluation",
+    "category": "registry",
+    "action": "router_unknown",
+    "expected": "unsupported_intent",
+    "mutations": 0
+  }
+]

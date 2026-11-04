@@ -1,0 +1,342 @@
+[
+  {
+    "event_id": "test-000472",
+    "customer_id": "test-c1745a0598b4d",
+    "device_id": "test-dc470a0a071bf",
+    "decision_time": 5175422,
+    "ranking_score": 0.44406735054296287,
+    "observations": {
+      "device_users_7d": 6,
+      "customer_devices_7d": 0,
+      "linked_customers_7d": 0,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 1,
+      "device_events_per_user_7d": 1.1666666666666667
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c1f6c9f3902ce",
+        "test-c56fcc54a5263",
+        "test-c8352601be5f7",
+        "test-cae632c87888a",
+        "test-ce4f81cd52325",
+        "test-cff69dd624700"
+      ],
+      "observed_customer_devices": [],
+      "customer_neighbor_count": 0,
+      "window_start": 4570622,
+      "window_end_exclusive": 5175422,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-000525",
+    "customer_id": "test-cae632c87888a",
+    "device_id": "test-dd382dc5c568f",
+    "decision_time": 4731512,
+    "ranking_score": 0.4300006209262408,
+    "observations": {
+      "device_users_7d": 7,
+      "customer_devices_7d": 1,
+      "linked_customers_7d": 6,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 0,
+      "device_events_per_user_7d": 1.4285714285714286
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c1f6c9f3902ce",
+        "test-c4c9c4febd1cf",
+        "test-c5d43af113bef",
+        "test-c5e51023518ea",
+        "test-c768f79f74985",
+        "test-cae632c87888a",
+        "test-cc2c9bd267c63"
+      ],
+      "observed_customer_devices": [
+        "test-dd382dc5c568f"
+      ],
+      "customer_neighbor_count": 6,
+      "window_start": 4126712,
+      "window_end_exclusive": 4731512,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-000242",
+    "customer_id": "test-c175a485ca133",
+    "device_id": "test-dcd862829eedd",
+    "decision_time": 4776697,
+    "ranking_score": 0.4081756688357638,
+    "observations": {
+      "device_users_7d": 6,
+      "customer_devices_7d": 1,
+      "linked_customers_7d": 5,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 0,
+      "device_events_per_user_7d": 1.5
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c0a4d0118c73a",
+        "test-c175a485ca133",
+        "test-c7938d5ccfd33",
+        "test-cca9924363d09",
+        "test-ccab076184b6a",
+        "test-cf19d62edf7cf"
+      ],
+      "observed_customer_devices": [
+        "test-dcd862829eedd"
+      ],
+      "customer_neighbor_count": 5,
+      "window_start": 4171897,
+      "window_end_exclusive": 4776697,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-000366",
+    "customer_id": "test-c981f646bb6d9",
+    "device_id": "test-deeb71befc069",
+    "decision_time": 4625367,
+    "ranking_score": 0.393821386829485,
+    "observations": {
+      "device_users_7d": 1,
+      "customer_devices_7d": 0,
+      "linked_customers_7d": 0,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 1,
+      "device_events_per_user_7d": 1.0
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-ccd472b666789"
+      ],
+      "observed_customer_devices": [],
+      "customer_neighbor_count": 0,
+      "window_start": 4020567,
+      "window_end_exclusive": 4625367,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-002506",
+    "customer_id": "test-c83cb37d54d80",
+    "device_id": "test-d7e1b1fab35c2",
+    "decision_time": 5059381,
+    "ranking_score": 0.3925613083037016,
+    "observations": {
+      "device_users_7d": 6,
+      "customer_devices_7d": 1,
+      "linked_customers_7d": 5,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 0,
+      "device_events_per_user_7d": 1.0
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c68f13d226db0",
+        "test-c83cb37d54d80",
+        "test-c9841185b7039",
+        "test-cbdedd1c4d8a3",
+        "test-ce6733579a12d",
+        "test-cf949125380b1"
+      ],
+      "observed_customer_devices": [
+        "test-d7e1b1fab35c2"
+      ],
+      "customer_neighbor_count": 5,
+      "window_start": 4454581,
+      "window_end_exclusive": 5059381,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-001908",
+    "customer_id": "test-c66f178893578",
+    "device_id": "test-db63bb5f15e46",
+    "decision_time": 5130225,
+    "ranking_score": 0.3878043235529047,
+    "observations": {
+      "device_users_7d": 6,
+      "customer_devices_7d": 3,
+      "linked_customers_7d": 9,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 0,
+      "device_events_per_user_7d": 1.3333333333333333
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c19aeb8a88a7c",
+        "test-c3b784f369328",
+        "test-c5fd7927c9c9c",
+        "test-c66f178893578",
+        "test-c907c09159216",
+        "test-cf5f8cd23878f"
+      ],
+      "observed_customer_devices": [
+        "test-db63bb5f15e46",
+        "test-dd134d6041ac5",
+        "test-df04eff66f3da"
+      ],
+      "customer_neighbor_count": 9,
+      "window_start": 4525425,
+      "window_end_exclusive": 5130225,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-002498",
+    "customer_id": "test-ca89b4e86e1c5",
+    "device_id": "test-df04eff66f3da",
+    "decision_time": 4931244,
+    "ranking_score": 0.3826805390068288,
+    "observations": {
+      "device_users_7d": 5,
+      "customer_devices_7d": 1,
+      "linked_customers_7d": 5,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 1,
+      "device_events_per_user_7d": 1.4
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c5fd7927c9c9c",
+        "test-c66f178893578",
+        "test-c6eb2a06cdc6a",
+        "test-c907c09159216",
+        "test-c959817862655"
+      ],
+      "observed_customer_devices": [
+        "test-db63bb5f15e46"
+      ],
+      "customer_neighbor_count": 5,
+      "window_start": 4326444,
+      "window_end_exclusive": 4931244,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-000861",
+    "customer_id": "test-c8352601be5f7",
+    "device_id": "test-dc470a0a071bf",
+    "decision_time": 5182840,
+    "ranking_score": 0.37825835378783024,
+    "observations": {
+      "device_users_7d": 7,
+      "customer_devices_7d": 1,
+      "linked_customers_7d": 6,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 0,
+      "device_events_per_user_7d": 1.1428571428571428
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c1745a0598b4d",
+        "test-c1f6c9f3902ce",
+        "test-c56fcc54a5263",
+        "test-c8352601be5f7",
+        "test-cae632c87888a",
+        "test-ce4f81cd52325",
+        "test-cff69dd624700"
+      ],
+      "observed_customer_devices": [
+        "test-dc470a0a071bf"
+      ],
+      "customer_neighbor_count": 6,
+      "window_start": 4578040,
+      "window_end_exclusive": 5182840,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-000320",
+    "customer_id": "test-cc2c9bd267c63",
+    "device_id": "test-dd382dc5c568f",
+    "decision_time": 5291447,
+    "ranking_score": 0.3744051273494488,
+    "observations": {
+      "device_users_7d": 5,
+      "customer_devices_7d": 1,
+      "linked_customers_7d": 4,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 0,
+      "device_events_per_user_7d": 1.2
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c1f6c9f3902ce",
+        "test-c4c9c4febd1cf",
+        "test-cae632c87888a",
+        "test-cc2c9bd267c63",
+        "test-ce4f81cd52325"
+      ],
+      "observed_customer_devices": [
+        "test-dd382dc5c568f"
+      ],
+      "customer_neighbor_count": 4,
+      "window_start": 4686647,
+      "window_end_exclusive": 5291447,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  },
+  {
+    "event_id": "test-002218",
+    "customer_id": "test-c56fcc54a5263",
+    "device_id": "test-dc470a0a071bf",
+    "decision_time": 4891986,
+    "ranking_score": 0.37083123451241107,
+    "observations": {
+      "device_users_7d": 5,
+      "customer_devices_7d": 0,
+      "linked_customers_7d": 0,
+      "device_events_1h": 0,
+      "customer_events_24h": 0,
+      "new_customer_device": 1,
+      "device_events_per_user_7d": 1.2
+    },
+    "evidence": {
+      "observed_device_customers": [
+        "test-c1745a0598b4d",
+        "test-c1f6c9f3902ce",
+        "test-c8352601be5f7",
+        "test-cae632c87888a",
+        "test-ce4f81cd52325"
+      ],
+      "observed_customer_devices": [],
+      "customer_neighbor_count": 0,
+      "window_start": 4287186,
+      "window_end_exclusive": 4891986,
+      "interpretation": "Observed shared connections are investigation context, not a fraud conclusion."
+    },
+    "action": "human_review_only",
+    "score_caveat": "Uncalibrated ranking score; not proof of misconduct."
+  }
+]

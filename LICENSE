@@ -2,7 +2,7 @@ MIT License
 
 Copyright (c) 2026 Vedant Thaker
 
-This license applies to the new projects/, docs/, scripts/ and root portfolio documentation. It does not relicense third-party datasets or the preserved Netflix_Project-8.ipynb notebook.
+This license applies to the new projects/, docs/, scripts/, root portfolio documentation, and the new legacy index, migration manifest and verification script. It does not relicense third-party datasets, original files archived under legacy/, or the preserved Netflix_Project-8.ipynb notebook.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

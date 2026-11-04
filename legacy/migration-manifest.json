@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "source_account": "Vedant160297",
+  "destination_account": "VEDANT1602",
+  "destination_repository": "VEDANT1602/DataScienceProject",
+  "migration_date": "2026-11-04",
+  "scope": "All five public source repositories returned by GitHub search; second page was empty.",
+  "historical_files_changed": false,
+  "repositories": [
+    {
+      "name": "Cryptocurrency-Sentiment-Analysis-System",
+      "source_url": "https://github.com/Vedant160297/Cryptocurrency-Sentiment-Analysis-System",
+      "source_clone_url": "https://github.com/Vedant160297/Cryptocurrency-Sentiment-Analysis-System.git",
+      "source_head": "522212469e8c1f04c56e2debc138fe09353c16de",
+      "source_tree_sha": "c9fc51829277557258f8fb6be24f744e006bcd42",
+      "snapshot_directory": "Cryptocurrency-Sentiment-Analysis-System",
+      "source_default_branch": "main",
+      "refs": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "522212469e8c1f04c56e2debc138fe09353c16de"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "4692684734b26cf896b1491705468fd98a27a6e5",
+          "tree_sha": "0b8fcfd2d33ca7b97e05476650201692d04a55d3",
+          "parents": [],
+          "author": {
+            "name": "Vedant160297",
+            "email": "138090322+Vedant160297@users.noreply.github.com",
+            "date": "2025-02-21T16:33:22-07:00"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-02-21T16:33:22-07:00"
+          },
+          "message": "Initial commit"
+        },
+        {
+          "sha": "522212469e8c1f04c56e2debc138fe09353c16de",
+          "tree_sha": "c9fc51829277557258f8fb6be24f744e006bcd42",
+          "parents": [
+            "4692684734b26cf896b1491705468fd98a27a6e5"
+          ],
+          "author": {
+            "name": "Vedant160297",
+            "email": "138090322+Vedant160297@users.noreply.github.com",
+            "date": "2025-02-21T16:33:58-07:00"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-02-21T16:33:58-07:00"
+          },
+          "message": "Add files via upload"
+        }
+      ],
+      "files": [
+        {
+          "path": "Cryptocurrency Sentiment Analysis System.ipynb",
+          "git_blob_sha": "c9bcf5c595f56cc7ec163f3824b1948b49074bd4",
+          "sha256": "00c74aa43f503c17da4af6a7bc7420041935d233598f5642eb738385e3fbf56e",
+          "bytes": 6879,
+          "git_mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "d6b85ccba3265f3e46bf5acc40f3664bb6a625ea",
+          "sha256": "a0aa60d0da30b2968b7ea929d01e1004cb2f2129659319225c6f96ff0e6e21c0",
+          "bytes": 42,
+          "git_mode": "100644"
+        }
+      ],
+      "total_bytes": 6921,
+      "validation": "Exact tracked Git-blob export; notebooks and demonstrations were not executed during migration.",
+      "licensing": "Original source rights retained; not relicensed under the portfolio MIT license."
+    },
+    {
+      "name": "FormVision",
+      "source_url": "https://github.com/Vedant160297/FormVision",
+      "source_clone_url": "https://github.com/Vedant160297/FormVision.git",
+      "source_head": "6cca5261bcc026f2716690c66a53c3795b59cc8b",
+      "source_tree_sha": "ef2b42e28f60b79256ccf6d8519ae3d658a8926a",
+      "snapshot_directory": "FormVision",
+      "source_default_branch": "main",
+      "refs": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "6cca5261bcc026f2716690c66a53c3795b59cc8b"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "463d0ef22c3a729cccdc688708bfd3a2e72caf95",
+          "tree_sha": "6f9509c88bed7080d496fc5e1d87a9315e30549d",
+          "parents": [],
+          "author": {
+            "name": "VEDANT1602",
+            "email": "thakervedant007@gmail.com",
+            "date": "2025-02-22T13:57:33-07:00"
+          },
+          "committer": {
+            "name": "VEDANT1602",
+            "email": "thakervedant007@gmail.com",
+            "date": "2025-02-22T13:57:33-07:00"
+          },
+          "message": "Initial commit"
+        },
+        {
+          "sha": "6cca5261bcc026f2716690c66a53c3795b59cc8b",
+          "tree_sha": "ef2b42e28f60b79256ccf6d8519ae3d658a8926a",
+          "parents": [
+            "463d0ef22c3a729cccdc688708bfd3a2e72caf95"
+          ],
+          "author": {
+            "name": "VEDANT1602",
+            "email": "thakervedant007@gmail.com",
+            "date": "2025-02-22T13:58:41-07:00"
+          },
+          "committer": {
+            "name": "VEDANT1602",
+            "email": "thakervedant007@gmail.com",
+            "date": "2025-02-22T13:58:41-07:00"
+          },
+          "message": "FormVision"
+        }
+      ],
+      "files": [
+        {
+          "path": ".gitattributes",
+          "git_blob_sha": "dfe0770424b2a19faf507a501ebfc23be8f54e7b",
+          "sha256": "1a1dbe176bc233b499d35a57db7513f2941c99ab9759f177830c9149be99005b",
+          "bytes": 66,
+          "git_mode": "100644"
+        },
+        {
+          "path": "Bench press/.ipynb_checkpoints/bench press-checkpoint.ipynb",
+          "git_blob_sha": "8d039264ec61feb28a87cc5aace7f1a4721aee98",
+          "sha256": "ece1036e3c8ca74ee61dd1e64e50ca82a55bd51450791ed28f7941ddca047aba",
+          "bytes": 1377749,
+          "git_mode": "100644"
+        },
+        {
+          "path": "Bench press/bench press.ipynb",
+          "git_blob_sha": "09ddfd0755d8de3f45f82e7c0e37ba4a724a2515",
+          "sha256": "384dca878dcd866fe8e361a6da3065d7bc757dc1c813249ae88913cf47921969",
+          "bytes": 1377748,
+          "git_mode": "100644"
+        },
+        {
+          "path": "Bench press/bench_press_video.mp4",
+          "git_blob_sha": "3df7e9fae5b5e75914e3456b6a95c798d3875cfe",
+          "sha256": "971ea99fd3ae137bccd298d210e167161b6f1c6a5677376054997d63f2f5fa0a",
+          "bytes": 20770946,
+          "git_mode": "100644"
+        },
+        {
+          "path": "Squats/.ipynb_checkpoints/Squats counter-checkpoint.ipynb",
+          "git_blob_sha": "30499b6314b32c2d24142aad6addce38f9ea24a9",
+          "sha256": "14b7e83d1620fe66e64d2df74c84fee794e9ebfa37e41bf9460d7883e780de32",
+          "bytes": 885503,
+          "git_mode": "100644"
+        },
+        {
+          "path": "Squats/Squats counter.ipynb",
+          "git_blob_sha": "94ee61dfe107d9f6418cd110e8b16990649087f4",
+          "sha256": "533f5803623d277deb8bf7a64eddc1cd2c64e4c626cdffe2fb0a84c1d8f23f04",
+          "bytes": 886892,
+          "git_mode": "100644"
+        },
+        {
+          "path": "Squats/max_squat_video.mp4",
+          "git_blob_sha": "43a2179a9c11d54b775c652a8dbcaea5de5bc31e",
+          "sha256": "72a92ab10d7afc3616755da731215935437a10b8a0f95b88c546a8a1100b42e9",
+          "bytes": 16184927,
+          "git_mode": "100644"
+        },
+        {
+          "path": "deadlift/.ipynb_checkpoints/deadlift counter-checkpoint.ipynb",
+          "git_blob_sha": "0045c0b2fe043e6041be0cfe2ac48ab100b738c7",
+          "sha256": "ba4589dc1375beaaebab5838cd136dfd04ddc62efa022f99acd5562bc47521f1",
+          "bytes": 2305739,
+          "git_mode": "100644"
+        },
+        {
+          "path": "deadlift/deadlift counter.ipynb",
+          "git_blob_sha": "0045c0b2fe043e6041be0cfe2ac48ab100b738c7",
+          "sha256": "ba4589dc1375beaaebab5838cd136dfd04ddc62efa022f99acd5562bc47521f1",
+          "bytes": 2305739,
+          "git_mode": "100644"
+        },
+        {
+          "path": "deadlift/deadlift_video.mp4",
+          "git_blob_sha": "9b000b71e5466d701d16ff8236549196a5be9c57",
+          "sha256": "15cce952631bcb099b633fd732ae87411903c794aed2ff0735364d6890ce48e4",
+          "bytes": 39793756,
+          "git_mode": "100644"
+        },
+        {
+          "path": "hamstring stretch/.ipynb_checkpoints/hamstring_stretch-checkpoint.ipynb",
+          "git_blob_sha": "b4992e6e8b8b0fa0ea7100a0ba2fdaf364e6655e",
+          "sha256": "ce96ba3396aa44d34e1376377293a4371970f64ab2cffa737edabce9f375aa2a",
+          "bytes": 211563,
+          "git_mode": "100644"
+        },
+        {
+          "path": "hamstring stretch/hamstring_flexibility.mp4",
+          "git_blob_sha": "a8d501d7b502920fa4a180d23ec015d7f1e2fb1d",
+          "sha256": "7daeb0335b323da9ee0f15ddc9f23ec9b2d12671720cb4773200d78eefa0f444",
+          "bytes": 1488345,
+          "git_mode": "100644"
+        },
+        {
+          "path": "hamstring stretch/hamstring_stretch.ipynb",
+          "git_blob_sha": "b4992e6e8b8b0fa0ea7100a0ba2fdaf364e6655e",
+          "sha256": "ce96ba3396aa44d34e1376377293a4371970f64ab2cffa737edabce9f375aa2a",
+          "bytes": 211563,
+          "git_mode": "100644"
+        },
+        {
+          "path": "one leg balance/.ipynb_checkpoints/one leg balance-checkpoint.ipynb",
+          "git_blob_sha": "363fcab7ed6e9634e198cf5555ceb88932c9a245",
+          "sha256": "4a62b68a633d79c53a6fd8893e8ea42dcf2b9a8a3e907b1b9861661f04f21517",
+          "bytes": 72,
+          "git_mode": "100644"
+        },
+        {
+          "path": "one leg balance/one leg balance.ipynb",
+          "git_blob_sha": "466fa21bef6c04311b19c3ac622a932060f68ec0",
+          "sha256": "df8cba1e981da2772cde4451267a83fc06e63da6e18eff0dfb02e747fa5f5ce0",
+          "bytes": 89795,
+          "git_mode": "100644"
+        },
+        {
+          "path": "one leg balance/one_leg_balance.mp4",
+          "git_blob_sha": "ae1f827e1d1947b38279077e05a0dee245311b5c",
+          "sha256": "4686a6cd68937312b8717302c47e1d6e99ce48ca594c3ce90911980aa3600e77",
+          "bytes": 8369334,
+          "git_mode": "100644"
+        },
+        {
+          "path": "one leg balance/one_leg_balance1.mp4",
+          "git_blob_sha": "5f22e586b56aac88c33283ff3a60032395c0ddeb",
+          "sha256": "e5bc8b00542f5c104120adbaa9aeceace3af00ccfc7d329a96dc7ef1ec01d5aa",
+          "bytes": 4871587,
+          "git_mode": "100644"
+        },
+        {
+          "path": "plank hold/.ipynb_checkpoints/plank-checkpoint.ipynb",
+          "git_blob_sha": "363fcab7ed6e9634e198cf5555ceb88932c9a245",
+          "sha256": "4a62b68a633d79c53a6fd8893e8ea42dcf2b9a8a3e907b1b9861661f04f21517",
+          "bytes": 72,
+          "git_mode": "100644"
+        },
+        {
+          "path": "plank hold/plank.ipynb",
+          "git_blob_sha": "f5df8f5a8d318560d0b00f1e2b47603d2653091d",
+          "sha256": "0138e36b5472d51220e1339abc1ccfd88ae28cb5d08437b93d578f7e9ea0d33b",
+          "bytes": 1095230,
+          "git_mode": "100644"
+        },
+        {
+          "path": "plank hold/plank_video.mp4",
+          "git_blob_sha": "c346ae78ebc1473f47b6fcf9ae1b7f116089383f",
+          "sha256": "63653877fd28970f92e0205d26b133a64ed28c6909b6e00fe8ccee3f14d3a3b1",
+          "bytes": 25738025,
+          "git_mode": "100644"
+        },
+        {
+          "path": "pushups/.ipynb_checkpoints/Pushup counter-checkpoint.ipynb",
+          "git_blob_sha": "a1359af63d1ef86522d1e951b1c161987a39a891",
+          "sha256": "a9f845bfa5ae65484df214d1e0fb648a50c82a6205a249ae773d60d5ab9708d6",
+          "bytes": 2785907,
+          "git_mode": "100644"
+        },
+        {
+          "path": "pushups/Pushup counter.ipynb",
+          "git_blob_sha": "b0a1bba4028dd1fc882f910d76c71e6e3f2e6278",
+          "sha256": "c9f256715d26548517f4041a986aa72b5db4db0a9853ef609a81ef30799bbfd5",
+          "bytes": 2783991,
+          "git_mode": "100644"
+        },
+        {
+          "path": "pushups/annotated_output.mp4",
+          "git_blob_sha": "85f30852a535c8affb99534a9a6d6e2a84959650",
+          "sha256": "fc8b3655a9f2a4f04347471611131fcaa64e7612b3c97b8bf9b2a2d4cc930c3b",
+          "bytes": 66675377,
+          "git_mode": "100644"
+        },
+        {
+          "path": "pushups/pushup_video.mp4",
+          "git_blob_sha": "666bfcde4ebdb9e200b43e4cf26dbca0654b6921",
+          "sha256": "f1422252aa5ddeea7cc088703d3d3b99653577158a83efd0cb7ce9159d0c275a",
+          "bytes": 48010301,
+          "git_mode": "100644"
+        },
+        {
+          "path": "shoulder stretch/.ipynb_checkpoints/shoulder_stretch-checkpoint.ipynb",
+          "git_blob_sha": "07981f5072a5cb7db96d5d8acddce1290b318f1b",
+          "sha256": "550f13951e6e851311bc99a98e73e70a883b6cc8bf416ac375a043e1b27a5c35",
+          "bytes": 200383,
+          "git_mode": "100644"
+        },
+        {
+          "path": "shoulder stretch/shoulder_flexibility.mp4",
+          "git_blob_sha": "4592e478448520f4eb3160fa38db60a261116680",
+          "sha256": "995c1ea00edb92dae38fc5c2264afcf8659ee0a1ad592dab1e72acd15199c05b",
+          "bytes": 2098721,
+          "git_mode": "100644"
+        },
+        {
+          "path": "shoulder stretch/shoulder_stretch.ipynb",
+          "git_blob_sha": "07981f5072a5cb7db96d5d8acddce1290b318f1b",
+          "sha256": "550f13951e6e851311bc99a98e73e70a883b6cc8bf416ac375a043e1b27a5c35",
+          "bytes": 200383,
+          "git_mode": "100644"
+        }
+      ],
+      "total_bytes": 250719714,
+      "validation": "Exact tracked Git-blob export; notebooks and demonstrations were not executed during migration.",
+      "licensing": "Original source rights retained; not relicensed under the portfolio MIT license."
+    },
+    {
+      "name": "Heart-Disease-Prediction-System",
+      "source_url": "https://github.com/Vedant160297/Heart-Disease-Prediction-System",
+      "source_clone_url": "https://github.com/Vedant160297/Heart-Disease-Prediction-System.git",
+      "source_head": "18c23400506612439cb8b902ce4928c09214406a",
+      "source_tree_sha": "19be0768fa8efbbb08b7f21ea52e6b4c87d12287",
+      "snapshot_directory": "Heart-Disease-Prediction-System",
+      "source_default_branch": "main",
+      "refs": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "18c23400506612439cb8b902ce4928c09214406a"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "1eab943efe3db0dacf7420df442e5b80b30282f8",
+          "tree_sha": "a60cccb36c9d1b7c689581f65bdf51f974978675",
+          "parents": [],
+          "author": {
+            "name": "Vedant160297",
+            "email": "138090322+Vedant160297@users.noreply.github.com",
+            "date": "2025-02-21T16:40:03-07:00"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-02-21T16:40:03-07:00"
+          },
+          "message": "Initial commit"
+        },
+        {
+          "sha": "18c23400506612439cb8b902ce4928c09214406a",
+          "tree_sha": "19be0768fa8efbbb08b7f21ea52e6b4c87d12287",
+          "parents": [
+            "1eab943efe3db0dacf7420df442e5b80b30282f8"
+          ],
+          "author": {
+            "name": "Vedant160297",
+            "email": "138090322+Vedant160297@users.noreply.github.com",
+            "date": "2025-02-21T16:50:44-07:00"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-02-21T16:50:44-07:00"
+          },
+          "message": "Add files via upload"
+        }
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "689be1dd28e531887f2c9c960f4e2a37658fdf4c",
+          "sha256": "4567384cd6fc611360f4016535aca2fdbc79a874d65cbad80cba92bbb891a8c8",
+          "bytes": 33,
+          "git_mode": "100644"
+        },
+        {
+          "path": "multi-modal heart disease prediction.ipynb",
+          "git_blob_sha": "3dddf6465716d773352d294607b5660564331a1d",
+          "sha256": "ed26cd28d7df833794116feed31f05ecbc8a1fdc69cdb757ef3dc99489bfe7e2",
+          "bytes": 12723,
+          "git_mode": "100644"
+        }
+      ],
+      "total_bytes": 12756,
+      "validation": "Exact tracked Git-blob export; notebooks and demonstrations were not executed during migration.",
+      "licensing": "Original source rights retained; not relicensed under the portfolio MIT license."
+    },
+    {
+      "name": "LLM-Powered-Knowledge-Base",
+      "source_url": "https://github.com/Vedant160297/LLM-Powered-Knowledge-Base",
+      "source_clone_url": "https://github.com/Vedant160297/LLM-Powered-Knowledge-Base.git",
+      "source_head": "0061199ac0947ae0004a1886eb184348838f9692",
+      "source_tree_sha": "dae88ce3f45ac6dd3b9bdca3d3ab046fe6d0b541",
+      "snapshot_directory": "LLM-Powered-Knowledge-Base",
+      "source_default_branch": "main",
+      "refs": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "0061199ac0947ae0004a1886eb184348838f9692"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "0c8d72c1ff79c840eb420715b32843c8748134e3",
+          "tree_sha": "f8a76399ceca765c51e274727f498d7120ce7317",
+          "parents": [],
+          "author": {
+            "name": "Vedant160297",
+            "email": "138090322+Vedant160297@users.noreply.github.com",
+            "date": "2025-02-21T16:35:46-07:00"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-02-21T16:35:46-07:00"
+          },
+          "message": "Initial commit"
+        },
+        {
+          "sha": "0061199ac0947ae0004a1886eb184348838f9692",
+          "tree_sha": "dae88ce3f45ac6dd3b9bdca3d3ab046fe6d0b541",
+          "parents": [
+            "0c8d72c1ff79c840eb420715b32843c8748134e3"
+          ],
+          "author": {
+            "name": "Vedant160297",
+            "email": "138090322+Vedant160297@users.noreply.github.com",
+            "date": "2025-02-21T16:36:23-07:00"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-02-21T16:36:23-07:00"
+          },
+          "message": "Add files via upload"
+        }
+      ],
+      "files": [
+        {
+          "path": "LLM-Powered Knowledge Base.ipynb",
+          "git_blob_sha": "a299b4e7b7cb6cef565be3a68e2281b68d22fa0b",
+          "sha256": "f54336d73f2d0012c3c0ae38474411c0d5be0f4005cbf1a70d5c338a52505c8f",
+          "bytes": 4279,
+          "git_mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "236267ff3c1d69807581a2e2fe1b7dce2be9d7a7",
+          "sha256": "1f2686ec2231b33d358e9764b1b093645ae4b51910eacc3479261d20f761a075",
+          "bytes": 28,
+          "git_mode": "100644"
+        }
+      ],
+      "total_bytes": 4307,
+      "validation": "Exact tracked Git-blob export; notebooks and demonstrations were not executed during migration.",
+      "licensing": "Original source rights retained; not relicensed under the portfolio MIT license."
+    },
+    {
+      "name": "Sales-Prediction-of-Cars-using-ML",
+      "source_url": "https://github.com/Vedant160297/Sales-Prediction-of-Cars-using-ML",
+      "source_clone_url": "https://github.com/Vedant160297/Sales-Prediction-of-Cars-using-ML.git",
+      "source_head": "894fe9d4e6e17e2d10f9c5ef99ad671fa7b7e2f6",
+      "source_tree_sha": "d82db69cfddeea613e9baaa1ffb7e832aae29f58",
+      "snapshot_directory": "Sales-Prediction-of-Cars-using-ML",
+      "source_default_branch": "main",
+      "refs": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "894fe9d4e6e17e2d10f9c5ef99ad671fa7b7e2f6"
+        }
+      ],
+      "commits": [
+        {
+          "sha": "8357d8ab186a12d209674631dcd0c01e8e920372",
+          "tree_sha": "a8d62c7d6085ed540f7c80f4fd5865be100745b8",
+          "parents": [],
+          "author": {
+            "name": "Vedant160297",
+            "email": "138090322+Vedant160297@users.noreply.github.com",
+            "date": "2025-02-21T16:58:54-07:00"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-02-21T16:58:54-07:00"
+          },
+          "message": "Initial commit"
+        },
+        {
+          "sha": "894fe9d4e6e17e2d10f9c5ef99ad671fa7b7e2f6",
+          "tree_sha": "d82db69cfddeea613e9baaa1ffb7e832aae29f58",
+          "parents": [
+            "8357d8ab186a12d209674631dcd0c01e8e920372"
+          ],
+          "author": {
+            "name": "Vedant160297",
+            "email": "138090322+Vedant160297@users.noreply.github.com",
+            "date": "2025-02-21T17:00:16-07:00"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-02-21T17:00:16-07:00"
+          },
+          "message": "Add files via upload"
+        }
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "ce3d2c159bf661a96788b896bc19c65766171135",
+          "sha256": "8bd385e1f8437a7b02ec4077744d283e9f811915624ca96faff32e0f934c7092",
+          "bytes": 36,
+          "git_mode": "100644"
+        },
+        {
+          "path": "STP598Project.pdf",
+          "git_blob_sha": "9112adab9141caf9ab7d2841e7e2f2b5515b07c3",
+          "sha256": "35352960fd90e86d756a9ae5695f05a7b9124ef97f0f8a27377fc7aa2986f0ae",
+          "bytes": 540481,
+          "git_mode": "100644"
+        }
+      ],
+      "total_bytes": 540517,
+      "validation": "Exact tracked Git-blob export; notebooks and demonstrations were not executed during migration.",
+      "licensing": "Original source rights retained; not relicensed under the portfolio MIT license."
+    }
+  ]
+}

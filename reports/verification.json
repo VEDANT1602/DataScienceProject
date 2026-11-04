@@ -12,24 +12,52 @@
       "project": "evidence-gate",
       "command": "python -m unittest discover -s tests -v",
       "tests": 25,
+      "skipped": 0,
       "passed": true,
-      "elapsed_seconds": 2.041
+      "elapsed_seconds": 1.607
     },
     {
       "project": "point-in-time-risk",
       "command": "python -m unittest discover -s tests -v",
       "tests": 18,
+      "skipped": 0,
       "passed": true,
-      "elapsed_seconds": 5.632
+      "elapsed_seconds": 4.992
     },
     {
       "project": "temporal-recommendations",
       "command": "python -m unittest discover -s tests -v",
       "tests": 19,
+      "skipped": 0,
       "passed": true,
-      "elapsed_seconds": 10.851
+      "elapsed_seconds": 12.968
+    },
+    {
+      "project": "graph-risk-investigations",
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 19,
+      "skipped": 0,
+      "passed": true,
+      "elapsed_seconds": 4.003
+    },
+    {
+      "project": "approval-workflow-lab",
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 84,
+      "skipped": 0,
+      "passed": true,
+      "elapsed_seconds": 12.607
+    },
+    {
+      "project": "inference-systems-lab",
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 39,
+      "skipped": 0,
+      "passed": true,
+      "elapsed_seconds": 15.053
     }
   ],
-  "total_tests": 62,
+  "total_tests": 204,
+  "total_skipped": 0,
   "all_passed": true
 }

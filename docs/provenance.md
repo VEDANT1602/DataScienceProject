@@ -17,5 +17,12 @@ Tutorial code, tutorial benchmark numbers and third-party result narratives were
 - **Evidence Gate:** original fictional documents and evaluation cases. No employer or customer records.
 - **Point-in-time Risk:** deterministic synthetic transactions. The generator defines the task; results cannot establish real fraud effectiveness.
 - **Temporal Recommendations:** MovieLens obtained from [GroupLens](https://grouplens.org/datasets/movielens/100k/). The raw dataset is excluded from this repository. Follow the project's data card and official terms before downloading or using it.
+- **Graph Risk Investigations:** original synthetic events and opaque entity identifiers, with strict prior-context features and disjoint split entities. Synthetic fraud labels are experiment ground truth, not allegations about real people.
+- **Approval Workflow Lab:** fictional SaaS tenants and authored protocol cases. The deterministic planner is not a tested LLM, and trusted principals simulate an upstream authentication boundary.
+- **Inference Systems Lab:** original local streaming fixtures, five fictional contracts and tiny seeded PyTorch tensors. Actual local CPU measurements remain separate from unexecuted CUDA, vLLM, Nebius and Nsight paths. Optional Colab/model use follows the linked provider/model terms.
 
 New project code is covered by the [MIT license](../LICENSE). Third-party data retains its own terms. The license does not relicense the preserved earlier notebook or any external data.
+
+## Historical repositories
+
+The [legacy collection](../legacy/README.md) is an exact tracked-file migration from Vedant160297, which Vedant identified as his other account. Its source commits, authors, dates, co-author credits and file hashes are retained. The migration does not turn an older prototype or report into a newly validated production system. Original archived files keep their existing rights; only the new index, manifest and verification script fall under this portfolio's MIT scope.

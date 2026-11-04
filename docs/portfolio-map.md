@@ -1,20 +1,51 @@
-# What these projects demonstrate
+# The portfolio: six current implementations and five earlier starting points
 
-| Engineering area | Public implementation | Evidence to review |
+**Here is how I frame, implement, evaluate and explain a system.** I start with a decision narrow enough to test, make the usual failure mode visible, build the boundary that addresses it, and keep the observed result beside its denominator and limitation. The next action follows from that evidence, including when the result favors caution.
+
+The six current projects are original public reference work with their own implementations, data contracts and recorded runs. The five archives preserve earlier notebooks, videos and a co-authored report. This progression makes my methods inspectable without presenting new experiments as historical employer or customer deployments.
+
+## Choose the engineering question
+
+| Project | Narrow question and implemented framework | Recorded outcome and practical limit |
 | --- | --- | --- |
-| Applied AI and document workflows | Evidence Gate | Retrieval contracts, answer/abstain decisions, per-case evaluation and local service |
-| Customer-facing architecture | Evidence Gate | Explicit access and evidence requirements, failure cases, interfaces and tradeoffs |
-| ML systems and fraud-risk methods | Point-in-time Risk | Synthetic event generator, rolling features, delayed labels, chronological model evaluation |
-| Reliability and data engineering | Point-in-time Risk | SQLite replay/checkpoint behavior, idempotence, restart tests and late-event policy |
-| Recommendations and ranking | Temporal Recommendations | PyTorch ranker, popularity comparator, temporal split and full-catalog metrics |
-| Technical writing and developer education | All three | Runnable commands, data cards, diagrams, narrative case studies and recorded results |
+| [Evidence Gate](../projects/evidence-gate/) | Is a relevant passage admissible for this requester? BM25 retrieval, tenant/role authorization, validity/approval/scope gates, conflict handling, citations and answer/clarify/abstain contracts. | The gated system makes **24/24** correct task decisions on a constructed holdout, versus **5/24** for the relevance-only ablation under the same authorization boundary. It answers 17 cases and handles the other seven through clarify/abstain. This is fictional extractive retrieval, not measured generative-model accuracy or customer generalization. [Metrics](../projects/evidence-gate/results/metrics.json). |
+| [Approval Workflow Lab](../projects/approval-workflow-lab/) | What exactly did the reviewer approve? Trusted principal boundary, tenant-isolated read-only SQL, registered KPIs, distinct requester/reviewer, signed transaction claims, version checks and atomic mutation/receipt/audit. | **40/40** evaluation contracts and **8/8** development cases; 29 evaluation cases require rejection. Six committed mutations match six execution audit events. An eight-thread replay applies one change and returns seven cached receipts. These authored protocol cases do not measure an LLM planner or prove a production identity/security service. [Metrics](../projects/approval-workflow-lab/results/metrics.json). |
+| [Point-in-time Risk](../projects/point-in-time-risk/) | Does a review model use only what existed at decision time, and can its feature state recover? Synthetic events, delayed labels, temporal windows, atomic SQLite replay/checkpoints, late-event quarantine and chronological comparison. | On **3,045** test events with **78** positive synthetic outcomes, temporal boosting has AP **0.1356** versus static logistic **0.0835**. At the same 142-review daily-budget aggregate, it finds 23 versus 21 positives. The model-class comparison is a limitation; a separate static-boosting diagnostic is reported. This is offline synthetic ranking, not production fraud capture or distributed feature-store scale. [Metrics](../projects/point-in-time-risk/artifacts/metrics.json). |
+| [Graph Risk Investigations](../projects/graph-risk-investigations/) | Does prior shared-device context improve a fixed review queue? Time-respecting graph features, entity-disjoint cohorts, identical fixed boosted-tree parameters, capacity accounting and label-free analyst cards. | On **2,700** synthetic test events with **77** positives, graph/static AP is **0.1096/0.0429**; positive reviews are **18/126 versus 9/126**. The gain shrinks from +8 positives before the declared mechanism shift to +1 after it. This supports a representative offline pilot, not deployment or a production fraud claim. It is graph feature engineering, not a GNN. [Metrics](../projects/graph-risk-investigations/reports/metrics.json). |
+| [Temporal Recommendations](../projects/temporal-recommendations/) | Does personalization earn its complexity after the time and candidate boundaries are fixed? PyTorch BPR versus popularity, global temporal split, validation-only selection, full eligible catalog, coverage and paired uncertainty. | On **51** eligible MovieLens test users, BPR/popularity NDCG@10 is **0.1636/0.1377**. The paired difference interval **[-0.0196, 0.0664]** includes zero, and the warm-only policy covers **10.26%** of positive test ratings. A separately labeled fallback diagnostic reaches a broader population; it is not a confirmatory model lift. Keep popularity while collecting stronger evidence. No online CTR or dwell-time effect is measured. [Metrics](../projects/temporal-recommendations/reports/metrics.json). |
+| [Inference Systems Lab](../projects/inference-systems-lab/) | Can a serving measurement survive malformed streams, rejected answers, fallback and missing usage? Bounded SSE transport, typed quality/SLO gates, per-attempt accounting, configurable vLLM/Nebius paths and an actual small PyTorch attention/KV experiment. | The committed HTTP fixture completes **12** known-answer loopback requests. The CPU attention run verifies cached/full outputs within tolerance; seven-trial medians are approximately **4.11/12.06 ms** for cached/full recomputation on the tiny untrained layer. This is neither LLM quality nor a serving speedup. **NVIDIA CUDA, vLLM GPU serving, Nebius and Nsight were not run** in the committed result. [Metrics](../projects/inference-systems-lab/results/metrics.json). |
 
-## How this relates to my profile
+The quantities above belong to different experiments. Combining their case counts into a single accuracy score would mix protocol contracts, synthetic model evaluation, offline recommendation ratings and a known-answer transport fixture.
 
-The projects make related engineering skills inspectable. They are new, public reference implementations with their own datasets and measured results. A synthetic risk experiment does not validate an employer's fraud-capture metric; an offline ranking result does not demonstrate an online CTR lift; a document retrieval benchmark does not measure the quality of a deployed language model.
+## What I would show for each kind of work
 
-The relevant portfolio statement is: **here is how I frame, implement, evaluate and explain this class of system.**
+| Professional discussion | Start with | What the reviewer can inspect |
+| --- | --- | --- |
+| Applied AI / forward-deployed engineering | Evidence Gate + Approval Workflow Lab | Discovery boundary, evidence policy, permission-scoped tools, failure cases, exact approval preview, evaluation contracts and rollout ownership. |
+| Fraud / risk ML | Point-in-time Risk + Graph Risk Investigations | Feature/label availability, leakage checks, delayed outcomes, fixed review capacity, graph confounders, drift slices, raw predictions and analyst context. |
+| GPU / inference / vLLM / NVIDIA / Nebius | Inference Systems Lab | Real transport/tensor code, measurement definitions, cache/fallback accounting, conditional CUDA/NVTX path and migration runbooks; executed versus unexecuted paths are explicit. |
+| Recommendation / ranking engineering | Temporal Recommendations | Trainable PyTorch objective, baseline, temporal split, candidate population, cold-start policy, uncertainty and the decision to retain a simpler default. |
+| Startup architecture / customer delivery | Approval Workflow Lab workshop + Inference Systems Lab guides | Reusable discovery and acceptance templates, shadow/pilot stages, named ownership and concrete integration tradeoffs. They are present artifacts, not proof that a workshop or customer expansion happened. |
+| Technical writing / developer education | All six current projects | Runnable commands, architecture explanations, data cards, raw outputs, narrative reports and failure examples. Publication reach and upstream contribution counts need their original links/analytics. |
 
-## Follow the evidence
+For a professional profile, the appropriate reference is [VEDANT1602/DataScienceProject](https://github.com/VEDANT1602/DataScienceProject) with the label **related public implementations**. The [19-bullet LinkedIn evidence map](linkedin-evidence-map.md) separates what the code demonstrates from the original records required for each CSAA, advisory and advocacy outcome.
 
-For each project, start at its README, run the test command, inspect the data card and experiment configuration, then compare the saved metrics with the case-study claims. Dataset limitations and runtime requirements live beside the implementation.
+## Preserve the starting points
+
+The [archive index](../legacy/README.md) records the migration from the user's earlier account, [Vedant160297](https://github.com/Vedant160297), into the selected current account, **VEDANT1602**. These are historical source snapshots, inspected but not executed during migration. The original files, attribution, embedded outputs and applicable rights remain intact.
+
+| Historical archive | Earlier topic visible in the preserved source | Progression and evidence boundary |
+| --- | --- | --- |
+| [LLM-Powered Knowledge Base](../legacy/LLM-Powered-Knowledge-Base/) | Sentence embeddings and cosine retrieval over four illustrative entries. | Evidence Gate extends the question from relevance to admissibility and abstention in a new measured experiment. The older notebook has no new RAG accuracy claim. |
+| [Cryptocurrency Sentiment Analysis](../legacy/Cryptocurrency-Sentiment-Analysis-System/) | DistilBERT tokenization/training/evaluation with eight synthetic statements. | It shows a small learning pipeline; current work makes split, population and measurement contracts more explicit. It does not establish real-market sentiment or trading performance. |
+| [Multimodal Heart Disease Prediction](../legacy/Heart-Disease-Prediction-System/) | CNN image features combined with tabular inputs for XGBoost. | Expected CSV/image data is absent. Preserve it as a pipeline starting point, without a clinical-validation claim or a newly reproduced result. |
+| [FormVision](../legacy/FormVision/) | Eight exercise notebooks using OpenCV/MediaPipe landmarks, joint angles and state transitions, plus demonstration videos and checkpoints. | Intermediate visual reasoning remains inspectable. Rule-based movement demonstrations are not a new biomechanics, medical or production validation. |
+| [Used-car Price Prediction](../legacy/Sales-Prediction-of-Cars-using-ML/) | Co-authored ASU report comparing model, feature and computing choices. | The source account supplies a report, not runnable code/data. Credit Divyesh Rathod, Meet Shah and Vedant Thaker; retain the report's external code reference and distinguish its reported results from new runs. |
+
+The [migration manifest](../legacy/migration-manifest.json) and [verifier](../legacy/verify_snapshots.py) identify all five source commits and hash all 35 exported source files. Original history links remain in the archive index. The portfolio MIT license does not relicense historical materials that had no standalone license at the pinned source commit.
+
+## Follow one claim to its evidence
+
+Start at the project README, read the data card and experiment contract, inspect the numerical source and row-level outcomes, then run the documented command. Read the failure example and uncertainty before adopting the conclusion. For archives, inspect the preserved source and migration hashes rather than treating embedded notebook output as a fresh execution.
+
+The portfolio's contribution is a reviewable chain from problem to implementation to observed result to next decision. Historical business, scale, leadership, readership and contribution claims retain their own original evidence sources.

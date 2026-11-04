@@ -1,0 +1,91 @@
+{
+  "all_passed": true,
+  "fixture_sha256": "10bf35e1459e7fa19fc00c1da243bae382967a523557b381acddbdcb38f3886d",
+  "measurement": "deterministic synthetic protocol contracts; not LLM accuracy",
+  "model_calls": 0,
+  "network_calls": 0,
+  "paid_service_calls": 0,
+  "runtime": {
+    "python": "3.11.9",
+    "sqlite": "3.45.1"
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "approval_workflow/__init__.py": "351829cb97b7e5b4626ed4f30144e786fd2ac9c6675b1981abc01123f1825cc7",
+    "approval_workflow/__main__.py": "e675388da7b0e3b2b454e859015653f5b355088226dd6b7759a33cc9a25dfea2",
+    "approval_workflow/benchmark.py": "9598e640fc09c0c800793748f621c78f2addfaeb1db4f634fde1d8718212a8f9",
+    "approval_workflow/core.py": "ec010313f61d289ec79363957aaaf422edd9787fe5a09ebb1b35c14fabfdeecc",
+    "approval_workflow/scenarios.py": "d6f35e50183cbef93543445010892485aa72e915ff2a6f2910676cc0f6cd5a23",
+    "approval_workflow/tools.py": "981a6c525dc4143ceeb4101611ceada8de708c45beeea80ed239d7b2308ce5e9"
+  },
+  "splits": {
+    "development": {
+      "actual_mutations": 0,
+      "by_category": {
+        "registry": {
+          "passed": 6,
+          "total": 6
+        },
+        "sql": {
+          "passed": 2,
+          "total": 2
+        }
+      },
+      "execution_audit_events": 0,
+      "expected_rejections": 1,
+      "pass_rate": 1.0,
+      "passed": 8,
+      "total": 8
+    },
+    "evaluation": {
+      "actual_mutations": 6,
+      "by_category": {
+        "approval": {
+          "passed": 9,
+          "total": 9
+        },
+        "atomicity": {
+          "passed": 2,
+          "total": 2
+        },
+        "authorization": {
+          "passed": 5,
+          "total": 5
+        },
+        "idempotency": {
+          "passed": 4,
+          "total": 4
+        },
+        "registry": {
+          "passed": 2,
+          "total": 2
+        },
+        "sql": {
+          "passed": 8,
+          "total": 8
+        },
+        "tenant": {
+          "passed": 3,
+          "total": 3
+        },
+        "validation": {
+          "passed": 3,
+          "total": 3
+        },
+        "version": {
+          "passed": 2,
+          "total": 2
+        },
+        "workflow": {
+          "passed": 2,
+          "total": 2
+        }
+      },
+      "execution_audit_events": 6,
+      "expected_rejections": 29,
+      "pass_rate": 1.0,
+      "passed": 40,
+      "total": 40
+    }
+  }
+}

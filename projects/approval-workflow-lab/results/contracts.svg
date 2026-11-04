@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="445" viewBox="0 0 720 445" role="img" aria-labelledby="title desc">
+<title id="title">Approval Workflow Lab: evaluation contracts passed</title>
+<desc id="desc">Counts from executed synthetic contract cases, grouped by category. These are not real-world attack coverage or model accuracy.</desc>
+<rect width="720" height="445" fill="#f6f8fb"/>
+<g font-family="Arial, sans-serif" font-size="14">
+<text x="16" y="29" font-size="21" font-weight="bold">Does the execution boundary enforce the contract?</text>
+<text x="16" y="49" fill="#46596d">Passed / evaluated cases. Each case uses fresh fictional tenant databases.</text>
+<text x="16" y="83" fill="#18324b">approval</text>
+<rect x="175" y="67" width="380.0" height="23" fill="#ecd9dc"/>
+<rect x="175" y="67" width="380.0" height="23" fill="#17796c"/>
+<text x="565.0" y="83">9/9</text>
+<text x="16" y="117" fill="#18324b">atomicity</text>
+<rect x="175" y="101" width="84.4" height="23" fill="#ecd9dc"/>
+<rect x="175" y="101" width="84.4" height="23" fill="#17796c"/>
+<text x="269.4" y="117">2/2</text>
+<text x="16" y="151" fill="#18324b">authorization</text>
+<rect x="175" y="135" width="211.1" height="23" fill="#ecd9dc"/>
+<rect x="175" y="135" width="211.1" height="23" fill="#17796c"/>
+<text x="396.1" y="151">5/5</text>
+<text x="16" y="185" fill="#18324b">idempotency</text>
+<rect x="175" y="169" width="168.9" height="23" fill="#ecd9dc"/>
+<rect x="175" y="169" width="168.9" height="23" fill="#17796c"/>
+<text x="353.9" y="185">4/4</text>
+<text x="16" y="219" fill="#18324b">registry</text>
+<rect x="175" y="203" width="84.4" height="23" fill="#ecd9dc"/>
+<rect x="175" y="203" width="84.4" height="23" fill="#17796c"/>
+<text x="269.4" y="219">2/2</text>
+<text x="16" y="253" fill="#18324b">sql</text>
+<rect x="175" y="237" width="337.8" height="23" fill="#ecd9dc"/>
+<rect x="175" y="237" width="337.8" height="23" fill="#17796c"/>
+<text x="522.8" y="253">8/8</text>
+<text x="16" y="287" fill="#18324b">tenant</text>
+<rect x="175" y="271" width="126.7" height="23" fill="#ecd9dc"/>
+<rect x="175" y="271" width="126.7" height="23" fill="#17796c"/>
+<text x="311.7" y="287">3/3</text>
+<text x="16" y="321" fill="#18324b">validation</text>
+<rect x="175" y="305" width="126.7" height="23" fill="#ecd9dc"/>
+<rect x="175" y="305" width="126.7" height="23" fill="#17796c"/>
+<text x="311.7" y="321">3/3</text>
+<text x="16" y="355" fill="#18324b">version</text>
+<rect x="175" y="339" width="84.4" height="23" fill="#ecd9dc"/>
+<rect x="175" y="339" width="84.4" height="23" fill="#17796c"/>
+<text x="269.4" y="355">2/2</text>
+<text x="16" y="389" fill="#18324b">workflow</text>
+<rect x="175" y="373" width="84.4" height="23" fill="#ecd9dc"/>
+<rect x="175" y="373" width="84.4" height="23" fill="#17796c"/>
+<text x="269.4" y="389">2/2</text>
+<text x="16" y="432" fill="#46596d">Fixed regression suite; no LLM calls, paid services, or production-security claim.</text>
+</g>
+</svg>

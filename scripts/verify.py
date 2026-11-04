@@ -12,7 +12,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PROJECTS = ("evidence-gate", "point-in-time-risk", "temporal-recommendations")
+PROJECTS = ("evidence-gate", "point-in-time-risk", "temporal-recommendations",
+            "graph-risk-investigations", "approval-workflow-lab", "inference-systems-lab")
 
 
 def child_environment() -> dict[str, str]:
@@ -32,12 +33,14 @@ def main() -> int:
         output = run.stdout + run.stderr
         counts = re.findall(r"Ran (\d+) tests? in", output)
         count = int(counts[-1]) if counts else 0
+        skipped_counts = re.findall(r"skipped=(\d+)", output)
+        skipped = int(skipped_counts[-1]) if skipped_counts else 0
         passed = run.returncode == 0 and count > 0 and "\nOK" in output
-        print(f"{name}: {'PASS' if passed else 'FAIL'} ({count} tests)")
+        print(f"{name}: {'PASS' if passed else 'FAIL'} ({count} tests, {skipped} skipped)", flush=True)
         if not passed:
             print(output)
         outcomes.append({"project": name, "command": "python -m unittest discover -s tests -v",
-                         "tests": count, "passed": passed,
+                         "tests": count, "skipped": skipped, "passed": passed,
                          "elapsed_seconds": round(time.perf_counter() - start, 3)})
     versions = {}
     for package in ("numpy", "scikit-learn", "matplotlib", "torch"):
@@ -48,10 +51,11 @@ def main() -> int:
     summary = {"python": platform.python_version(), "operating_system": platform.system(),
                "dependencies": versions, "projects": outcomes,
                "total_tests": sum(row["tests"] for row in outcomes),
+               "total_skipped": sum(row["skipped"] for row in outcomes),
                "all_passed": all(row["passed"] for row in outcomes)}
     destination = ROOT / "reports" / "verification.json"
     destination.parent.mkdir(exist_ok=True)
-    destination.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+    destination.write_bytes((json.dumps(summary, indent=2) + "\n").encode("utf-8"))
     print(f"Total: {summary['total_tests']} tests; all_passed={summary['all_passed']}")
     return 0 if summary["all_passed"] else 1
 

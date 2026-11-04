@@ -1,0 +1,17 @@
+{
+  "template_only": true,
+  "not_loaded_as_runtime_policy": true,
+  "workflow_name": "fictional-account-and-case-operations",
+  "identity_owner": "TO_BE_ASSIGNED",
+  "tenant_membership_source": "TO_BE_VERIFIED",
+  "requester_role": "support-operator",
+  "reviewer_role": "authorized-team-lead",
+  "require_distinct_actors": true,
+  "operations_to_review": ["set_plan", "set_case_status"],
+  "review_fields": ["tenant", "actor", "operation", "payload", "expected_version", "expires_at"],
+  "evaluation_fixture": "data/scenarios.json",
+  "rollout_stage": "local-synthetic-only",
+  "production_dependencies": ["verified-identity", "key-management", "revocation", "operational-logging", "independent-review"],
+  "stop_conditions": ["cross-tenant-access", "unapproved-mutation", "duplicate-mutation", "missing-execution-audit"],
+  "next_decision_owner": "TO_BE_ASSIGNED"
+}
