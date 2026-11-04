@@ -1,0 +1,35 @@
+{
+  "python": "3.11.9",
+  "operating_system": "Windows",
+  "dependencies": {
+    "numpy": "1.26.0",
+    "scikit-learn": "1.3.0",
+    "matplotlib": "3.7.3",
+    "torch": "2.9.1"
+  },
+  "projects": [
+    {
+      "project": "evidence-gate",
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 25,
+      "passed": true,
+      "elapsed_seconds": 2.041
+    },
+    {
+      "project": "point-in-time-risk",
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 18,
+      "passed": true,
+      "elapsed_seconds": 5.632
+    },
+    {
+      "project": "temporal-recommendations",
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 19,
+      "passed": true,
+      "elapsed_seconds": 10.851
+    }
+  ],
+  "total_tests": 62,
+  "all_passed": true
+}

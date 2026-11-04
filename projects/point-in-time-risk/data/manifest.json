@@ -1,0 +1,11 @@
+{
+  "kind": "original synthetic data",
+  "license": "MIT",
+  "seed": 19,
+  "n_transactions": 12000,
+  "csv_encoding": "UTF-8",
+  "csv_line_endings": "LF",
+  "decompressed_sha256": "a887427d22298b09e35446a1e3c78877d5da493cca0718c00949ff472cf9049e",
+  "compressed_sha256": "d12d39b3c8ebfee66594780cc31669134ca1d99e7cd1bac350efd49e4c89af76",
+  "generator": "risklab/data.py:generate"
+}

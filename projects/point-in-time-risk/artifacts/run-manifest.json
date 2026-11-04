@@ -1,0 +1,36 @@
+{
+  "command": "python -m risklab demo --out artifacts",
+  "report_command": "python -m risklab report --out artifacts",
+  "test_command": "python -m unittest discover -s tests -v",
+  "test_status": "passed",
+  "tests_run": 18,
+  "metric_reconciliation": {
+    "static_logistic": "all metrics reconcile to committed per-transaction predictions",
+    "temporal_boosting": "all metrics reconcile to committed per-transaction predictions",
+    "static_boosting_ablation": "all metrics reconcile to committed per-transaction predictions",
+    "INVALID_future_marker": "all metrics reconcile to committed per-transaction predictions"
+  },
+  "dataset_sha256": "a887427d22298b09e35446a1e3c78877d5da493cca0718c00949ff472cf9049e",
+  "source_tree_sha256": "48ee66d68bc618c86d871462056e87e2275471ffe7edf7b279a12536e75bfbe5",
+  "source_file_sha256": {
+    "risklab/__init__.py": "80700c70dabccf0d1605e2eb3b7cb67ca5ffe99ed590805dac929d64e4758038",
+    "risklab/__main__.py": "f0324419cde450b9b75782ed0f2a936aa6eb37ea801b4fcc8f7a724207784456",
+    "risklab/data.py": "0d678eff00dbdb624155c274f02ed9e98c90a59a5799866135992d1932f9a493",
+    "risklab/experiment.py": "ea4f62790444206d370e751013965bda768f69ff44775c25b8eb5ec5baad4b93",
+    "risklab/report.py": "9601b23627dfb72b382f93e31656b2833de8439576905126424b72b958bae774",
+    "risklab/store.py": "204b8ddd18126f14e47a9125312351131d71ccf41ddacb804e49bdbf58ec7ecc",
+    "tests/test_contracts.py": "cae80227fc0f755bfc8e789620ff955f09b651e60d1aea200883620688c8cf1e"
+  },
+  "environment": {
+    "python": "3.11.9",
+    "os": "Windows",
+    "numpy": "1.26.0",
+    "scikit_learn": "1.3.0"
+  },
+  "execution_thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "timing_scope": "local end-to-end SQLite replay; not GPU/distributed serving benchmark"
+}
