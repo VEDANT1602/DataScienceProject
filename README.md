@@ -4,6 +4,8 @@ I build around the decision a system needs to support: what evidence is availabl
 
 This portfolio turns that approach into runnable engineering work. Each project starts with a common workflow, exposes a specific failure mode, implements an alternative, and records the result of an actual experiment. The reports explain the reasoning; the code and run artifacts let you challenge it.
 
+**Looking for a separate repository?** Use the [repository directory](docs/repository-directory.md). It links the new XGBoost/graph, ETA and search-ranking projects, plus all five restored earlier repositories.
+
 ## Start with a problem
 
 | Project | Decision | What to inspect |
@@ -27,6 +29,7 @@ These are independent portfolio implementations created in November 2026. They d
 | Graph review queue | 18 positive outcomes reviewed versus 9 for static features at the same 126-review budget across 2,700 synthetic test events | Prior graph context helps on this generator; only one of the nine additional outcomes is after the distribution shift |
 | Transaction approval | 40/40 authored evaluation contracts and 8/8 development examples; eight concurrent retries apply one mutation | Bind approval to the exact transaction and commit mutation, receipt and audit together; this is protocol validation, not LLM accuracy |
 | Attention arithmetic | Tiny CPU float32 attention: 12.064 ms full recomputation versus 4.107 ms KV reuse; maximum numerical difference 5.22e-08 | Reuse is correct for the checked tensors; this toy CPU result does not measure vLLM, NVIDIA GPU speed or provider savings |
+| Real CUDA arithmetic | Free Colab Tesla T4, float16: 25.626 ms full recomputation versus 20.790 ms KV reuse over seven trials; maximum difference 6.10e-05 | The separate [hardware-backed check](projects/inference-systems-lab/results/colab-t4/) passes the declared tolerance for tiny attention; it is not an LLM serving benchmark or a CPU/GPU comparison |
 
 Full denominators, uncertainty, raw evaluation outputs and limitations are in the linked case studies. These results were measured on the included fictional data or the declared public-data protocol.
 
@@ -70,7 +73,7 @@ The original [Netflix notebook](Netflix_Project-8.ipynb) remains available as ea
 
 [Open the free Colab lab](https://colab.research.google.com/github/VEDANT1602/DataScienceProject/blob/master/projects/inference-systems-lab/notebooks/free_gpu_lab.ipynb) for the conditional NVIDIA CUDA experiment. It checks actual hardware and records the resolved code revision. Free GPU availability varies. The optional in-process vLLM cells are disabled until explicitly enabled; there are no tunnels, provider keys or paid resource allocations.
 
-The [NVIDIA runbook](projects/inference-systems-lab/docs/gpu-runbook.md), [vLLM migration guide](projects/inference-systems-lab/docs/migrate-to-vllm.md), [Nebius migration guide](projects/inference-systems-lab/docs/migrate-to-nebius.md) and [20-minute workshop](projects/inference-systems-lab/docs/workshop-20-minutes.md) show implementation and teaching artifacts. The committed local run has **no CUDA device**: real GPU, vLLM, Nebius and Nsight measurements are recorded as not run. The streaming adapter was exercised against a loopback fixture only.
+The [NVIDIA runbook](projects/inference-systems-lab/docs/gpu-runbook.md), [vLLM migration guide](projects/inference-systems-lab/docs/migrate-to-vllm.md), [Nebius migration guide](projects/inference-systems-lab/docs/migrate-to-nebius.md) and [20-minute workshop](projects/inference-systems-lab/docs/workshop-20-minutes.md) show implementation and teaching artifacts. The original Windows run has no CUDA device. A separate [free Colab T4 run](projects/inference-systems-lab/results/colab-t4/) now records actual CUDA attention correctness and raw timing trials. vLLM serving, Nebius and Nsight measurements remain unexecuted. The streaming adapter was exercised against a loopback fixture only.
 
 **Author:** [Vedant Thaker / VEDANT1602](https://github.com/VEDANT1602) · [LinkedIn](https://www.linkedin.com/in/vedant-thaker/)
 
@@ -79,3 +82,5 @@ The [NVIDIA runbook](projects/inference-systems-lab/docs/gpu-runbook.md), [vLLM 
 The [historical project collection](legacy/) preserves all five public repositories from [Vedant160297](https://github.com/Vedant160297): FormVision, the LLM knowledge-base prototype, cryptocurrency sentiment analysis, the heart-prediction prototype, and the co-authored car-prediction report. Original files, credits, source commits and limitations remain visible.
 
 The migration manifest records 35 original files and their hashes. These snapshots retain their original scope; they are separate from the newly executed portfolio experiments above. See the [index and verification instructions](legacy/README.md) before trying to run an older notebook.
+
+The five earlier projects are also published as individual repositories under **VEDANT1602**, with their original source commits unchanged. Open the [directory](docs/repository-directory.md#earlier-projects-visible-separately-on-my-account) or the [Repositories tab](https://github.com/VEDANT1602?tab=repositories) to find them directly.

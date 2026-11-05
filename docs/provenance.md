@@ -19,7 +19,7 @@ Tutorial code, tutorial benchmark numbers and third-party result narratives were
 - **Temporal Recommendations:** MovieLens obtained from [GroupLens](https://grouplens.org/datasets/movielens/100k/). The raw dataset is excluded from this repository. Follow the project's data card and official terms before downloading or using it.
 - **Graph Risk Investigations:** original synthetic events and opaque entity identifiers, with strict prior-context features and disjoint split entities. Synthetic fraud labels are experiment ground truth, not allegations about real people.
 - **Approval Workflow Lab:** fictional SaaS tenants and authored protocol cases. The deterministic planner is not a tested LLM, and trusted principals simulate an upstream authentication boundary.
-- **Inference Systems Lab:** original local streaming fixtures, five fictional contracts and tiny seeded PyTorch tensors. Actual local CPU measurements remain separate from unexecuted CUDA, vLLM, Nebius and Nsight paths. Optional Colab/model use follows the linked provider/model terms.
+- **Inference Systems Lab:** original local streaming fixtures, five fictional contracts and tiny seeded PyTorch tensors. Actual local CPU measurements remain separate from the subsequent free Colab Tesla T4 CUDA arithmetic run. vLLM serving, Nebius and Nsight paths remain unexecuted. Optional Colab/model use follows the linked provider/model terms.
 
 New project code is covered by the [MIT license](../LICENSE). Third-party data retains its own terms. The license does not relicense the preserved earlier notebook or any external data.
 
