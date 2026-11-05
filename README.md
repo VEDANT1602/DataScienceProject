@@ -4,7 +4,7 @@ I build around the decision a system needs to support: what evidence is availabl
 
 This portfolio turns that approach into runnable engineering work. Each project starts with a common workflow, exposes a specific failure mode, implements an alternative, and records the result of an actual experiment. The reports explain the reasoning; the code and run artifacts let you challenge it.
 
-**Looking for a separate repository?** Use the [repository directory](docs/repository-directory.md). It links the new XGBoost/graph, ETA and search-ranking projects, plus all five restored earlier repositories.
+**Looking for a separate repository?** Use the [repository directory](docs/repository-directory.md). It groups fulfillment planning, policy evaluation, agent recovery, decision memory, fraud modeling, ETA and search-ranking projects, plus all five restored earlier repositories.
 
 ## Start with a problem
 
@@ -67,7 +67,7 @@ The last command reproduces five local experiments and a tiny original recommend
 
 [My engineering method](docs/engineering-method.md) explains the framing and evidence standard. [The project-to-skills map](docs/portfolio-map.md) shows which parts of the implementation demonstrate applied AI, ML systems and customer-facing engineering skills. [The LinkedIn evidence map](docs/linkedin-evidence-map.md) connects public artifacts to professional methods and identifies which historical outcomes require their original records. [Provenance and attribution](docs/provenance.md) separates original implementation, conceptual references and dataset terms.
 
-The original [Netflix notebook](Netflix_Project-8.ipynb) remains available as earlier work. The six projects above are the current starting point.
+The original [Netflix notebook](Netflix_Project-8.ipynb) remains available as earlier work. The six bundled projects above and the linked standalone repositories are the current starting points.
 
 ## GPU, vLLM, NVIDIA and Nebius
 

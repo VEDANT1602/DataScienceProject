@@ -2,7 +2,18 @@
 
 The portfolio has focused repositories as well as the original collection. New work has its own problem statement, source, data contract and measured result. Earlier projects retain their original history and credits.
 
-## New, focused experiments
+## Fulfillment and agent systems
+
+| Repository | Engineering question | Evidence boundary |
+| --- | --- | --- |
+| [Grocery Batch Planner](https://github.com/VEDANT1602/grocery-batch-planner) | How should duration predictions feed a constrained assignment decision? | Actual XGBoost and OR-Tools CP-SAT on original synthetic orders. Store, capacity and predicted-deadline constraints, independent feasibility verification, bounded search and checked fallback. Buffering trades accepted volume for fewer late assigned orders. |
+| [Fulfillment Policy Lab](https://github.com/VEDANT1602/fulfillment-policy-lab) | Do logged offers support the policy we want to test? | Known synthetic randomization, support/ESS gates, group cross-fitting, frozen policy selection, IPS/DR and cluster intervals. The selected policy misses the simulator-best candidate; unsupported policies receive no estimate. |
+| [Agent Replay Lab](https://github.com/VEDANT1602/agent-replay-lab) | What survives a stopped worker and a missed acknowledgement? | Original SQLite DAG runner with leases/fencing, synthetic attempt reservations, transactional outbox and deduplicating local receiver. Five injected restart-boundary simulations; no live model or exactly-once external API claim. |
+| [Decision Memory Lab](https://github.com/VEDANT1602/decision-memory-lab) | Which facts must survive a bounded agent handoff? | Original revision ledger, source digests, tenant checks, expiry/conflict refusal and whole-JSON UTF-8 byte budgeting. Fourteen authored contracts; no LLM answer-quality or provider token-savings claim. |
+
+The agent projects take conceptual direction from [ECC](https://github.com/affaan-m/ECC), with pinned source credits in their own provenance documents. The fulfillment topics align with the methods requested in [Instacart's Senior Machine Learning Engineer, Fulfillment posting](https://www.instacart.careers/job?gh_jid=8240305). All four are new independent experiments; they contain no employer data or reconstructed workplace results.
+
+## Fraud, prediction and search
 
 | Repository | Engineering question | Evidence boundary |
 | --- | --- | --- |

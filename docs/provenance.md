@@ -23,6 +23,10 @@ Tutorial code, tutorial benchmark numbers and third-party result narratives were
 
 New project code is covered by the [MIT license](../LICENSE). Third-party data retains its own terms. The license does not relicense the preserved earlier notebook or any external data.
 
+## New standalone fulfillment and agent experiments
+
+The [repository directory](repository-directory.md) links Grocery Batch Planner, Fulfillment Policy Lab, Agent Replay Lab and Decision Memory Lab. Each contains original code, original synthetic/authored fixtures, results and its own provenance record. Agent Replay Lab and Decision Memory Lab credit the concepts inspected in [ECC](https://github.com/affaan-m/ECC) at `b38be6a7f6350964d59328b52f0624e1d1d552d1`; ECC installers and runtime were not executed. Fulfillment methods use primary technical references and the role's engineering themes, not copied company implementations or historical resume figures.
+
 ## Historical repositories
 
 The [legacy collection](../legacy/README.md) is an exact tracked-file migration from Vedant160297, which Vedant identified as his other account. Its source commits, authors, dates, co-author credits and file hashes are retained. The migration does not turn an older prototype or report into a newly validated production system. Original archived files keep their existing rights; only the new index, manifest and verification script fall under this portfolio's MIT scope.
