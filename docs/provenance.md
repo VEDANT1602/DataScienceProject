@@ -27,6 +27,10 @@ New project code is covered by the [MIT license](../LICENSE). Third-party data r
 
 The [repository directory](repository-directory.md) links Grocery Batch Planner, Fulfillment Policy Lab, Agent Replay Lab and Decision Memory Lab. Each contains original code, original synthetic/authored fixtures, results and its own provenance record. Agent Replay Lab and Decision Memory Lab credit the concepts inspected in [ECC](https://github.com/affaan-m/ECC) at `b38be6a7f6350964d59328b52f0624e1d1d552d1`; ECC installers and runtime were not executed. Fulfillment methods use primary technical references and the role's engineering themes, not copied company implementations or historical resume figures.
 
+## November 9 standalone collection
+
+The [22-project directory](new-projects-2026-11-09.md) and [source map](project-source-map.json) record the new independent implementations inspired by the three user-selected collections. Every selected entry has an exact source link and pinned commit. Source license uncertainty was handled through conceptual reference only: no upstream source program, dataset, weights, media, prose or reported result was imported. Each new repository contains its own fixtures, measured outputs, license and assistance disclosure. Public work samples demonstrate current methods and do not establish private deployments or historical resume outcomes.
+
 ## Historical repositories
 
 The [legacy collection](../legacy/README.md) is an exact tracked-file migration from Vedant160297, which Vedant identified as his other account. Its source commits, authors, dates, co-author credits and file hashes are retained. The migration does not turn an older prototype or report into a newly validated production system. Original archived files keep their existing rights; only the new index, manifest and verification script fall under this portfolio's MIT scope.

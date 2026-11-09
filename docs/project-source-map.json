@@ -1,0 +1,446 @@
+{
+  "date": "2026-11-09",
+  "counts": {
+    "gallery": 10,
+    "shsarv": 10,
+    "500-project-index": 2
+  },
+  "tests": 214,
+  "projects": [
+    {
+      "name": "article-change-ledger",
+      "title": "Article Change Ledger",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/article-change-ledger",
+      "problem": "Can an ingestion job resume without losing or duplicating article revisions?",
+      "skills": [
+        "Python",
+        "data engineering",
+        "retrieval preparation",
+        "FDE integration"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/KalyanM45/Article-Web-Scraping/blob/11b0faba69f22d9c740861e9bb284b890a0ebaad/README.md",
+      "publication_status": "published",
+      "source_entry": "Article Scraper",
+      "source_commit": "11b0faba69f22d9c740861e9bb284b890a0ebaad",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "GPL-3.0"
+    },
+    {
+      "name": "retail-metric-contracts",
+      "title": "Retail Metric Contracts",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/retail-metric-contracts",
+      "problem": "Do the sales and fulfillment metrics agree once refunds, retries and cancellations are counted correctly?",
+      "skills": [
+        "SQL",
+        "retail analytics",
+        "production data quality",
+        "fulfillment"
+      ],
+      "tests": 11,
+      "source_entry_url": "https://github.com/KalyanM45/E-Commerce-Data-Analysis/blob/4a6ad249eac37497f817b15ed0d7cea184bdd206/README.md",
+      "publication_status": "published",
+      "source_entry": "E-Commerce Data Analysis",
+      "source_commit": "4a6ad249eac37497f817b15ed0d7cea184bdd206",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "GPL-3.0"
+    },
+    {
+      "name": "fare-snapshot-audit",
+      "title": "Fare Snapshot Audit",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/fare-snapshot-audit",
+      "problem": "Can a fare model use only the information available at quote time and recognize when a quote is stale?",
+      "skills": [
+        "tabular ML",
+        "time-aware feature contracts",
+        "model serving",
+        "pricing workflows"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/KalyanM45/Flight-Fare-Prediction/blob/e571ca3f2759132f4e118edef29908a9bb75f628/README.md",
+      "publication_status": "published",
+      "source_entry": "Flight Fare Prediction",
+      "source_commit": "e571ca3f2759132f4e118edef29908a9bb75f628",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "GPL-3.0"
+    },
+    {
+      "name": "gesture-command-filter",
+      "title": "Gesture Command Filter",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/gesture-command-filter",
+      "problem": "When should a noisy hand-landmark stream produce exactly one UI command?",
+      "skills": [
+        "computer vision interfaces",
+        "robotics signals",
+        "state machines",
+        "real-time input validation"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/KalyanM45/Hand-Tracking-Using-Opencv/blob/707047399b367038d529cd0bbd2d36082c8ab384/README.md",
+      "publication_status": "published",
+      "source_entry": "Hand Tracking using OpenCV",
+      "source_commit": "707047399b367038d529cd0bbd2d36082c8ab384",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "GPL-3.0"
+    },
+    {
+      "name": "image-duplicate-audit",
+      "title": "Image Duplicate Audit",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/image-duplicate-audit",
+      "problem": "Does an image evaluation remain independent when resized or slightly altered copies cross the split?",
+      "skills": [
+        "computer vision",
+        "dataset curation",
+        "evaluation leakage",
+        "ML pipelines"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/KalyanM45/End-to-End-Image-Scraping/blob/53515394bfa2a9574960998e74b50047601486e8/README.md",
+      "publication_status": "published",
+      "source_entry": "Image Scraper",
+      "source_commit": "53515394bfa2a9574960998e74b50047601486e8",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "GPL-3.0"
+    },
+    {
+      "name": "store-cohort-audit",
+      "title": "Store Cohort Audit",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/store-cohort-audit",
+      "problem": "Did a regional operational metric improve within comparable stores, or only because the store mix changed?",
+      "skills": [
+        "statistics",
+        "retail operations",
+        "cohort analysis",
+        "executive communication"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/KalyanM45/Indian-Restaurants-Data-Analysis/blob/8b209b752494d5c8cfa9fee7444b62f044875081/README.md",
+      "publication_status": "published",
+      "source_entry": "Indian Restaurant's Data Analysis",
+      "source_commit": "8b209b752494d5c8cfa9fee7444b62f044875081",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "GPL-3.0"
+    },
+    {
+      "name": "api-doc-contracts",
+      "title": "API Documentation Contracts",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/api-doc-contracts",
+      "problem": "Which public API documentation claims have become stale after a code change?",
+      "skills": [
+        "developer tooling",
+        "technical writing",
+        "CI",
+        "FDE sample quality"
+      ],
+      "tests": 11,
+      "source_entry_url": "https://github.com/KalyanM45/Doclify/blob/93dfd6632929e0b1dc4b10b1ff0f2115aa890d01/README.md",
+      "publication_status": "published",
+      "source_entry": "Doclify: Cli for Docs",
+      "source_commit": "93dfd6632929e0b1dc4b10b1ff0f2115aa890d01",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "AGPL-3.0"
+    },
+    {
+      "name": "report-number-auditor",
+      "title": "Report Number Auditor",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/report-number-auditor",
+      "problem": "Bind numerical report claims to artifact, population, denominator and unit.",
+      "skills": [
+        "Python",
+        "evaluation contracts",
+        "reproducibility",
+        "technical writing"
+      ],
+      "tests": 9,
+      "source_entry_url": "https://github.com/KalyanM45/Multi-Agentic-Blog-Generation/blob/8b743e21ac0e940dc8bd159f5d94a8f5eb17c630/README.md",
+      "publication_status": "published",
+      "source_entry": "Multi Agentic Blog Generation",
+      "source_commit": "8b743e21ac0e940dc8bd159f5d94a8f5eb17c630",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "MIT"
+    },
+    {
+      "name": "snapshot-completeness-monitor",
+      "title": "Snapshot Completeness Monitor",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/snapshot-completeness-monitor",
+      "problem": "Emit membership changes only after a coherent complete snapshot is assembled.",
+      "skills": [
+        "Python",
+        "SQLite",
+        "API pagination",
+        "data quality",
+        "change detection"
+      ],
+      "tests": 12,
+      "source_entry_url": "https://github.com/KalyanM45/GitPulse/blob/8af259174045fce5c081b36e36b407df82834823/README.md",
+      "publication_status": "published",
+      "source_entry": "GitHub Tracker",
+      "source_commit": "8af259174045fce5c081b36e36b407df82834823",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": null
+    },
+    {
+      "name": "field-visit-planner",
+      "title": "Field Visit Planner",
+      "collection": "gallery",
+      "url": "https://github.com/VEDANT1602/field-visit-planner",
+      "problem": "Choose a feasible multi-day customer-visit itinerary under time windows and daily budgets.",
+      "skills": [
+        "Python",
+        "dynamic programming",
+        "time windows",
+        "constraint verification",
+        "FDE planning"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner/blob/59db5bb0f1aeebd593a5114c67f8e619afceb25a/README.md",
+      "publication_status": "published",
+      "source_entry": "Travel Planning Agent",
+      "source_commit": "59db5bb0f1aeebd593a5114c67f8e619afceb25a",
+      "index_commit": "04a210263e266c68f8c44546c1007fd8bd85ade1",
+      "license_observation": "GPL-3.0"
+    },
+    {
+      "name": "retail-demand-backtest",
+      "title": "Retail Demand Backtest",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/retail-demand-backtest",
+      "problem": "Which model should supply SKU/store replenishment inputs when promotions and missing history change?",
+      "skills": [
+        "Python",
+        "Time-series forecasting",
+        "Gradient boosting",
+        "Temporal validation"
+      ],
+      "tests": 9,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/TimeSeries%20Multi%20StoreSales%20prediction",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "TimeSeries Multi StoreSales prediction",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "credit-calibration-lab",
+      "title": "Credit Calibration Lab",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/credit-calibration-lab",
+      "problem": "When should a calibrated score be withheld or recalibrated instead of turning a ranking result into an approval rule?",
+      "skills": [
+        "Python",
+        "Calibration",
+        "Risk modeling",
+        "Probability shift"
+      ],
+      "tests": 8,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/Loan%20Repayment%20Prediction",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Loan Repayment Prediction",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "merchant-churn-cohorts",
+      "title": "Merchant Churn Cohorts",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/merchant-churn-cohorts",
+      "problem": "Does a model identify future merchant inactivity beyond tenure and cohort artifacts?",
+      "skills": [
+        "Python",
+        "Cohort analysis",
+        "Classification",
+        "Feature engineering"
+      ],
+      "tests": 9,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/Predict%20Employee%20Turnover%20with%20scikitlearn",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Predict Employee Turnover with scikitlearn",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "batch-quality-triage",
+      "title": "Batch Quality Triage",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/batch-quality-triage",
+      "problem": "Should an operations model predict a quality score or prioritize costly batch failures?",
+      "skills": [
+        "Python",
+        "Ordinal learning",
+        "Quality engineering",
+        "Decision costs"
+      ],
+      "tests": 8,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/Wine%20Quality%20prediction",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Wine Quality prediction",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "document-topic-routing",
+      "title": "Document Topic Routing",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/document-topic-routing",
+      "problem": "Which team should receive a technical document when it spans topics or resembles an unseen category?",
+      "skills": [
+        "Python",
+        "NLP",
+        "TF-IDF",
+        "Multi-label classification"
+      ],
+      "tests": 8,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/Research%20topic%20Prediction",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Research topic Prediction",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "reservation-dialog-contracts",
+      "title": "Reservation Dialog Contracts",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/reservation-dialog-contracts",
+      "problem": "Can a booking assistant collect missing fields and reserve capacity exactly once despite repeated messages and concurrent requests?",
+      "skills": [
+        "Python",
+        "SQLite",
+        "State machines",
+        "Concurrency"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/AI%20Room%20Booking%20Chatbot%20%5BIBM%20WATSON%5D",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "AI Room Booking Chatbot [IBM WATSON]",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "fulfillment-task-state",
+      "title": "Fulfillment Task State",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/fulfillment-task-state",
+      "problem": "Do sequence windows distinguish pick/pack/wait/move states without leakage from the same simulated worker session?",
+      "skills": [
+        "Python",
+        "Sequence features",
+        "Robotics",
+        "Random forests"
+      ],
+      "tests": 8,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/Human%20Activity%20Detection",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Human Activity Detection",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "aisle-geometry-lab",
+      "title": "Aisle Geometry Lab",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/aisle-geometry-lab",
+      "problem": "Estimate a synthetic aisle direction only when two pixel-line fits have enough support.",
+      "skills": [
+        "NumPy",
+        "computer vision",
+        "RANSAC",
+        "robust estimation",
+        "geometry"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/Lane%20Line%20Detection%20%5BOPEN%20CV%5D",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Lane Line Detection [OPEN CV]",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "occupancy-event-counter",
+      "title": "Occupancy Event Counter",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/occupancy-event-counter",
+      "problem": "Count anonymous directional crossings once despite pauses, short occlusion and duplicate frames.",
+      "skills": [
+        "NumPy",
+        "SciPy",
+        "connected components",
+        "association",
+        "event state machines"
+      ],
+      "tests": 11,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/Human%20Detection%20%26%20Counting%20Project%20%5BOPEN%20CV%5D",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Human Detection & Counting Project [OPEN CV]",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "claims-multilabel-signals",
+      "title": "Claims Multilabel Signals",
+      "collection": "shsarv",
+      "url": "https://github.com/VEDANT1602/claims-multilabel-signals",
+      "problem": "Predict co-occurring fictional review reasons without hiding rare-label support behind one threshold.",
+      "skills": [
+        "scikit-learn",
+        "multilabel classification",
+        "calibration thresholds",
+        "group splits",
+        "risk methods"
+      ],
+      "tests": 11,
+      "source_entry_url": "https://github.com/shsarv/Machine-Learning-Projects/tree/028b32244cb688cb1beb0ca90754596aeef5e812/Mechanisms%20Of%20Action%20(MoA)%20Prediction",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Mechanisms Of Action (MoA) Prediction",
+      "source_commit": "028b32244cb688cb1beb0ca90754596aeef5e812",
+      "license_observation": "README MIT claim; root license absent"
+    },
+    {
+      "name": "inventory-bellman-lab",
+      "title": "Inventory Bellman Lab",
+      "collection": "500-project-index",
+      "url": "https://github.com/VEDANT1602/inventory-bellman-lab",
+      "problem": "Choose replenishment orders while tracking the two-period pipeline and finite horizon.",
+      "skills": [
+        "Python",
+        "NumPy",
+        "Dynamic programming",
+        "Inventory control",
+        "Paired simulation"
+      ],
+      "tests": 9,
+      "source_entry_url": "https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code/blob/5f104458e9e081bf0b24df78bbe3bc839edca899/README.md",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Time-series ideas (4)",
+      "source_commit": "5f104458e9e081bf0b24df78bbe3bc839edca899",
+      "license_observation": "No root license file"
+    },
+    {
+      "name": "checkpoint-integrity-lab",
+      "title": "Checkpoint Integrity Lab",
+      "collection": "500-project-index",
+      "url": "https://github.com/VEDANT1602/checkpoint-integrity-lab",
+      "problem": "Resume the same training trajectory after rejecting newer incomplete or corrupt snapshots.",
+      "skills": [
+        "Python",
+        "PyTorch",
+        "Optimizer state",
+        "Checkpoint recovery",
+        "Artifact integrity"
+      ],
+      "tests": 10,
+      "source_entry_url": "https://github.com/ashishpatel26/500-AI-Machine-learning-Deep-learning-Computer-vision-NLP-Projects-with-code/blob/5f104458e9e081bf0b24df78bbe3bc839edca899/README.md",
+      "publication_status": "prepared; repository creation pending",
+      "source_entry": "Production ML (44)",
+      "source_commit": "5f104458e9e081bf0b24df78bbe3bc839edca899",
+      "license_observation": "No root license file"
+    }
+  ]
+}

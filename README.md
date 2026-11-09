@@ -6,6 +6,8 @@ This portfolio turns that approach into runnable engineering work. Each project 
 
 **Looking for a separate repository?** Use the [repository directory](docs/repository-directory.md). It groups fulfillment planning, policy evaluation, agent recovery, decision memory, fraud modeling, ETA and search-ranking projects, plus all five restored earlier repositories.
 
+**New: [22 original engineering case studies](docs/new-projects-2026-11-09.md)** covering demand and inventory, calibrated risk, document workflows, product analytics, vision methods and checkpoint recovery. Ten repositories are published; twelve are prepared locally while GitHub's repository-creation cooldown is active. The [source map](docs/project-source-map.json) records ten distinct inspirations from each requested project gallery and two from the 500-project index, with each entry's publication state and evidence limits.
+
 ## Start with a problem
 
 | Project | Decision | What to inspect |
