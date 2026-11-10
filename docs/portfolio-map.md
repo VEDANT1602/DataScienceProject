@@ -1,10 +1,10 @@
 # The portfolio: thirty-five current implementations and five earlier starting points
 
-**Start with [six selected work samples by experience](selected-work-by-experience.md)** for recommendations/fulfillment, fraud/review signals, and independent inference/training systems. This is a curated reading route through the larger portfolio, with each new experiment identified as independent work.
+The [Engineering Portfolio](engineering-portfolio.md) connects system design, implementation and recorded results across recommendations and fulfillment, fraud and claims review, and inference and training systems.
 
 **Here is how I frame, implement, evaluate and explain a system.** I start with a decision narrow enough to test, make the usual failure mode visible, build the boundary that addresses it, and keep the observed result beside its denominator and limitation. The next action follows from that evidence, including when the result favors caution.
 
-The thirty-five implemented projects have their own code, data contracts and recorded runs. Twenty-six are publicly available; nine remain prepared locally for a later selected batch. The [November 9 directory](new-projects-2026-11-09.md) groups the 22 new case studies, records publication state and maps them to role-specific discussions. The thirteen earlier public implementations are detailed below: seven standalone repositories and six bundled projects. The [repository directory](repository-directory.md) also links the five earlier projects restored as separate repositories, alongside their preserved archives. This progression makes my methods inspectable without presenting new experiments as historical employer or customer deployments.
+The thirty-five implemented projects have their own code, data contracts and recorded runs. Twenty-six are publicly available; nine remain prepared locally. The [November 9 directory](new-projects-2026-11-09.md) groups the 22 new case studies by their engineering questions and records publication state. The thirteen earlier public implementations are detailed below: seven standalone repositories and six bundled projects. The [repository directory](repository-directory.md) also links the five earlier projects restored as separate repositories, alongside their preserved archives. This progression makes my methods inspectable without presenting new experiments as historical employer or customer deployments.
 
 ## Choose the engineering question
 
@@ -26,9 +26,9 @@ The thirty-five implemented projects have their own code, data contracts and rec
 
 The quantities above belong to different experiments. Combining their case counts into a single accuracy score would mix protocol contracts, synthetic model evaluation, offline recommendation ratings and a known-answer transport fixture.
 
-## What I would show for each kind of work
+## Engineering domains
 
-| Professional discussion | Start with | What the reviewer can inspect |
+| Engineering area | Implementations | Technical questions |
 | --- | --- | --- |
 | Applied AI / forward-deployed engineering | Evidence Gate + Approval Workflow Lab | Discovery boundary, evidence policy, permission-scoped tools, failure cases, exact approval preview, evaluation contracts and rollout ownership. |
 | Fraud / risk ML | Hybrid Fraud GNN + Point-in-time Risk + Graph Risk Investigations | Actual XGBoost and learned GraphSAGE-style context alongside engineered controls, feature/label availability, fixed review capacity, drift slices and raw predictions. The simpler graph control wins the new hybrid comparison. |
@@ -40,11 +40,11 @@ The quantities above belong to different experiments. Combining their case count
 | Agent infrastructure / recoverable execution | Agent Replay Lab + Decision Memory Lab | Persisted execution boundaries, stale-worker fencing, outbox delivery, source-backed revisions, required context and reasons to stop. These are local protocols, not model capability or hosted security benchmarks. |
 | Technical writing / developer education | All thirty-five current projects | Runnable commands, architecture explanations, data cards, raw outputs, narrative reports and failure examples. Publication reach and upstream contribution counts need their original links/analytics. |
 
-For a professional profile, link the matching standalone repository for fraud, ETA or search work, or [VEDANT1602/DataScienceProject](https://github.com/VEDANT1602/DataScienceProject) for the original six, with the label **related public implementation**. The account-wide [repository directory](repository-directory.md) keeps the destinations clear. The [19-bullet LinkedIn evidence map](linkedin-evidence-map.md) separates what the code demonstrates from the original records required for each CSAA, advisory and advocacy outcome.
+The account-wide [repository directory](repository-directory.md) links the standalone implementations and the six bundled projects in [VEDANT1602/DataScienceProject](https://github.com/VEDANT1602/DataScienceProject). The [19-bullet LinkedIn evidence map](linkedin-evidence-map.md) separates what the code demonstrates from the original records required for each CSAA, advisory and advocacy outcome.
 
 ## Preserve the starting points
 
-The [archive index](../legacy/README.md) records the migration from the user's earlier account, [Vedant160297](https://github.com/Vedant160297), into the selected current account, **VEDANT1602**. These are historical source snapshots, inspected but not executed during migration. The original files, attribution, embedded outputs and applicable rights remain intact.
+The [archive index](../legacy/README.md) records the migration from my earlier account, [Vedant160297](https://github.com/Vedant160297), into my current account, **VEDANT1602**. These are historical source snapshots, inspected but not executed during migration. The original files, attribution, embedded outputs and applicable rights remain intact.
 
 | Historical archive | Earlier topic visible in the preserved source | Progression and evidence boundary |
 | --- | --- | --- |

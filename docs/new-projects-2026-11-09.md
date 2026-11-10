@@ -4,7 +4,7 @@ These new independent portfolio projects follow the same method: narrow the deci
 
 The source map contains **10 distinct inspirations from AI Project Gallery, 10 from Machine-Learning-Projects, and two from the 500-project index**. Sources supplied ideas; code, fixtures, model artifacts and measured results are new. No source notebook, dataset, weights, screenshots or reported performance was copied.
 
-**Publication status: 13 repositories published; 9 prepared locally.** After GitHub limited creation on November 9, three selected repositories were published on November 10: Claims Multilabel Signals, Checkpoint Integrity Lab and Retail Demand Backtest. The remaining nine are outside this small publication batch. Prepared entries below are not live links; their reviewed code, data, models and results remain in the local source archive. Publication status does not change their measured local results. For a focused starting point, use the [six work samples grouped by experience](selected-work-by-experience.md).
+**Publication status: 13 repositories published; 9 prepared locally.** Claims Multilabel Signals, Checkpoint Integrity Lab and Retail Demand Backtest were published on November 10, following GitHub's temporary creation limit on November 9. Prepared entries below are not live links; their reviewed code, data, models and results remain in the local source archive. Publication status does not change their measured local results. The [Engineering Portfolio](engineering-portfolio.md) explains the systems, design decisions and results across the main engineering domains.
 
 The reviewed local run passes **214 tests across 22 repositories**. Test totals combine different contracts and are not an accuracy score. Every repository includes pinned CI, a reproducible run, input/result commitments and a data card. See the [machine-readable source map](project-source-map.json).
 
@@ -45,9 +45,9 @@ The reviewed local run passes **214 tests across 22 repositories**. Test totals 
 | Inventory Bellman Lab | Choose replenishment orders while tracking the two-period pipeline and finite horizon. | 9 | prepared; repository creation pending |
 | [Checkpoint Integrity Lab](https://github.com/VEDANT1602/checkpoint-integrity-lab) | Resume the same training trajectory after rejecting newer incomplete or corrupt snapshots. | 10 | published |
 
-## Choose a work sample for a role
+## Engineering domains
 
-| Discussion | Start with | What it demonstrates |
+| Domain | Implementations | Engineering focus |
 |---|---|---|
 | Fulfillment and operations research | Retail Demand Backtest, Inventory Bellman Lab, Field Visit Planner, Retail Metric Contracts | Demand boundaries, pipeline state, constrained planning, paired simulation and auditable SQL grain. |
 | Risk and review systems | Credit Calibration Lab, Claims Multilabel Signals, Batch Quality Triage | Probability quality under shift, label-specific support and decision-cost tradeoffs. These are fictional advisory experiments, not eligibility decisions. |

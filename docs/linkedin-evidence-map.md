@@ -1,12 +1,12 @@
 # LinkedIn evidence map: show the method and keep the original outcome traceable
 
-**For the small set selected to accompany LinkedIn experience, open [selected work by experience](selected-work-by-experience.md).** Two examples per area connect recommendations and fulfillment with Ace, fraud and review signals with CSAA, and inference/training systems with independent work. These are related public implementations created in November 2026; they are not reassigned to an employer or presented as historical outcome evidence.
+The [Engineering Portfolio](engineering-portfolio.md) presents the public implementations by engineering domain: recommendation and fulfillment, fraud and claims review, and inference and training systems. This map records the separate boundary between those implementations and historical professional outcomes.
 
 My public portfolio makes an engineering approach inspectable: define the decision, build a narrow implementation, test the failure modes, measure the result, and state what would change the next decision. A new reference implementation can demonstrate that approach. It cannot recreate a historical employer or client outcome.
 
 The 19 rows below map the current LinkedIn experience bullets: eight CSAA, six independent startup advisory, and five independent advocacy. The statements in the second column are profile claims supplied for the rewrite, not figures verified by this repository. The last column names the original evidence needed to substantiate them. Private records should remain private unless publication is authorized; an approved, redacted summary or a reference can support a conversation without exposing customer data.
 
-The portfolio combines the original six-project collection with focused standalone repositories, including [Hybrid Fraud GNN](https://github.com/VEDANT1602/hybrid-fraud-gnn), [Dispatch ETA Lab](https://github.com/VEDANT1602/dispatch-eta-lab) and [Tree Search Ranker](https://github.com/VEDANT1602/tree-search-ranker), plus newer case studies. Link the relevant repository directly when adding work samples. The [repository directory](repository-directory.md) records publication state and also lists the five earlier projects restored separately on the selected account.
+The portfolio combines the original six-project collection with focused standalone repositories, including [Hybrid Fraud GNN](https://github.com/VEDANT1602/hybrid-fraud-gnn), [Dispatch ETA Lab](https://github.com/VEDANT1602/dispatch-eta-lab) and [Tree Search Ranker](https://github.com/VEDANT1602/tree-search-ranker), plus newer case studies. The [repository directory](repository-directory.md) records publication state and also lists the five earlier projects restored separately on VEDANT1602.
 
 ## CSAA: eight bullets
 
@@ -68,14 +68,14 @@ The five [historical archives](../legacy/) preserve earlier work and attribution
 | [FormVision](../legacy/FormVision/) | Pose/angle/state-transition notebooks, original outputs and demonstration videos. | No newly measured biomechanics, clinical or production result. |
 | [Used-car Price Prediction](../legacy/Sales-Prediction-of-Cars-using-ML/) | Co-authored ASU model/computing comparison report. | Source account contains the report, not runnable code/data; preserve all three credited authors. |
 
-## The reference I would add to LinkedIn
+## Public portfolio reference
 
-**Title:** Independent AI and ML Systems Reference Implementations
+**Title:** Engineering Portfolio | Vedant Thaker
 
 **Link:** [github.com/VEDANT1602](https://github.com/VEDANT1602)
 
 **Description:** Original implementations of fraud ranking with XGBoost and learned graph context, search reranking, ETA uncertainty, evidence-aware retrieval, approval-scoped tools, event-time risk features, recommendation evaluation and inference measurement. Includes code, data cards, failure tests, raw results and engineering case studies. New public method demonstrations; historical work metrics retain their original evidence sources.
 
-For an experience-specific work sample, use [Hybrid Fraud GNN](https://github.com/VEDANT1602/hybrid-fraud-gnn) for fraud/model evaluation, [Tree Search Ranker](https://github.com/VEDANT1602/tree-search-ranker) for advisory retrieval methods, or [Dispatch ETA Lab](https://github.com/VEDANT1602/dispatch-eta-lab) for uncertainty and operational decisions. The original six reference implementations remain linked through [DataScienceProject](https://github.com/VEDANT1602/DataScienceProject). These destinations describe where the public work lives; they do not change the historical evidence requirements above.
+Project entry points include [Hybrid Fraud GNN](https://github.com/VEDANT1602/hybrid-fraud-gnn) for fraud/model evaluation, [Tree Search Ranker](https://github.com/VEDANT1602/tree-search-ranker) for retrieval methods, and [Dispatch ETA Lab](https://github.com/VEDANT1602/dispatch-eta-lab) for uncertainty and operational decisions. The original six reference implementations remain linked through [DataScienceProject](https://github.com/VEDANT1602/DataScienceProject). These destinations describe where the public work lives; they do not change the historical evidence requirements above.
 
 The [portfolio map](portfolio-map.md) gives the actual public experiment outcomes and their denominators. On LinkedIn, attach this reference with wording such as “Related public implementation.” Keep original job scope and historical outcomes tied to their own records.
