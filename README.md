@@ -1,12 +1,14 @@
 # Vedant Thaker | Applied AI and Decision Systems
 
+**Start with [six selected work samples by experience](docs/selected-work-by-experience.md):** recommendations and fulfillment alongside Ace, fraud and review signals alongside CSAA, and inference/training systems alongside my independent work. These are related independent implementations, with their dates, results and limits kept explicit.
+
 I build around the decision a system needs to support: what evidence is available, what can go wrong, and what would make the next action defensible.
 
 This portfolio turns that approach into runnable engineering work. Each project starts with a common workflow, exposes a specific failure mode, implements an alternative, and records the result of an actual experiment. The reports explain the reasoning; the code and run artifacts let you challenge it.
 
 **Looking for a separate repository?** Use the [repository directory](docs/repository-directory.md). It groups fulfillment planning, policy evaluation, agent recovery, decision memory, fraud modeling, ETA and search-ranking projects, plus all five restored earlier repositories.
 
-**New: [22 original engineering case studies](docs/new-projects-2026-11-09.md)** covering demand and inventory, calibrated risk, document workflows, product analytics, vision methods and checkpoint recovery. Ten repositories are published; twelve are prepared locally while GitHub's repository-creation cooldown is active. The [source map](docs/project-source-map.json) records ten distinct inspirations from each requested project gallery and two from the 500-project index, with each entry's publication state and evidence limits.
+**New: [22 original engineering case studies](docs/new-projects-2026-11-09.md)** covering demand and inventory, calibrated risk, document workflows, product analytics, vision methods and checkpoint recovery. Thirteen repositories are published; nine remain prepared locally for a later selected batch. The [source map](docs/project-source-map.json) records ten distinct inspirations from each requested project gallery and two from the 500-project index, with each entry's publication state and evidence limits.
 
 ## Start with a problem
 

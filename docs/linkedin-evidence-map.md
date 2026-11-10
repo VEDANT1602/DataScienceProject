@@ -1,10 +1,12 @@
 # LinkedIn evidence map: show the method and keep the original outcome traceable
 
+**For the small set selected to accompany LinkedIn experience, open [selected work by experience](selected-work-by-experience.md).** Two examples per area connect recommendations and fulfillment with Ace, fraud and review signals with CSAA, and inference/training systems with independent work. These are related public implementations created in November 2026; they are not reassigned to an employer or presented as historical outcome evidence.
+
 My public portfolio makes an engineering approach inspectable: define the decision, build a narrow implementation, test the failure modes, measure the result, and state what would change the next decision. A new reference implementation can demonstrate that approach. It cannot recreate a historical employer or client outcome.
 
 The 19 rows below map the current LinkedIn experience bullets: eight CSAA, six independent startup advisory, and five independent advocacy. The statements in the second column are profile claims supplied for the rewrite, not figures verified by this repository. The last column names the original evidence needed to substantiate them. Private records should remain private unless publication is authorized; an approved, redacted summary or a reference can support a conversation without exposing customer data.
 
-The portfolio now spans nine current implementations: the six-project collection plus three separate repositories, [Hybrid Fraud GNN](https://github.com/VEDANT1602/hybrid-fraud-gnn), [Dispatch ETA Lab](https://github.com/VEDANT1602/dispatch-eta-lab) and [Tree Search Ranker](https://github.com/VEDANT1602/tree-search-ranker). Link the relevant repository directly when adding work samples. The [repository directory](repository-directory.md) also lists the five earlier projects restored separately on the selected account.
+The portfolio combines the original six-project collection with focused standalone repositories, including [Hybrid Fraud GNN](https://github.com/VEDANT1602/hybrid-fraud-gnn), [Dispatch ETA Lab](https://github.com/VEDANT1602/dispatch-eta-lab) and [Tree Search Ranker](https://github.com/VEDANT1602/tree-search-ranker), plus newer case studies. Link the relevant repository directly when adding work samples. The [repository directory](repository-directory.md) records publication state and also lists the five earlier projects restored separately on the selected account.
 
 ## CSAA: eight bullets
 

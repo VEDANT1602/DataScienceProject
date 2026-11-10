@@ -1,8 +1,10 @@
 # The portfolio: thirty-five current implementations and five earlier starting points
 
+**Start with [six selected work samples by experience](selected-work-by-experience.md)** for recommendations/fulfillment, fraud/review signals, and independent inference/training systems. This is a curated reading route through the larger portfolio, with each new experiment identified as independent work.
+
 **Here is how I frame, implement, evaluate and explain a system.** I start with a decision narrow enough to test, make the usual failure mode visible, build the boundary that addresses it, and keep the observed result beside its denominator and limitation. The next action follows from that evidence, including when the result favors caution.
 
-The thirty-five implemented projects have their own code, data contracts and recorded runs. Twenty-three are publicly available; twelve are prepared locally while GitHub's repository-creation cooldown is active. The [November 9 directory](new-projects-2026-11-09.md) groups the 22 new case studies, records publication state and maps them to role-specific discussions. The thirteen earlier public implementations are detailed below: seven standalone repositories and six bundled projects. The [repository directory](repository-directory.md) also links the five earlier projects restored as separate repositories, alongside their preserved archives. This progression makes my methods inspectable without presenting new experiments as historical employer or customer deployments.
+The thirty-five implemented projects have their own code, data contracts and recorded runs. Twenty-six are publicly available; nine remain prepared locally for a later selected batch. The [November 9 directory](new-projects-2026-11-09.md) groups the 22 new case studies, records publication state and maps them to role-specific discussions. The thirteen earlier public implementations are detailed below: seven standalone repositories and six bundled projects. The [repository directory](repository-directory.md) also links the five earlier projects restored as separate repositories, alongside their preserved archives. This progression makes my methods inspectable without presenting new experiments as historical employer or customer deployments.
 
 ## Choose the engineering question
 

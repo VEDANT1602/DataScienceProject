@@ -4,7 +4,7 @@ These new independent portfolio projects follow the same method: narrow the deci
 
 The source map contains **10 distinct inspirations from AI Project Gallery, 10 from Machine-Learning-Projects, and two from the 500-project index**. Sources supplied ideas; code, fixtures, model artifacts and measured results are new. No source notebook, dataset, weights, screenshots or reported performance was copied.
 
-**Publication status: 10 repositories published; 12 prepared locally.** GitHub temporarily limited repository creation after the first ten. Prepared entries below are not live links; their reviewed code, data, models and results remain in the local source archive. Publication status does not change their measured local results.
+**Publication status: 13 repositories published; 9 prepared locally.** After GitHub limited creation on November 9, three selected repositories were published on November 10: Claims Multilabel Signals, Checkpoint Integrity Lab and Retail Demand Backtest. The remaining nine are outside this small publication batch. Prepared entries below are not live links; their reviewed code, data, models and results remain in the local source archive. Publication status does not change their measured local results. For a focused starting point, use the [six work samples grouped by experience](selected-work-by-experience.md).
 
 The reviewed local run passes **214 tests across 22 repositories**. Test totals combine different contracts and are not an accuracy score. Every repository includes pinned CI, a reproducible run, input/result commitments and a data card. See the [machine-readable source map](project-source-map.json).
 
@@ -27,7 +27,7 @@ The reviewed local run passes **214 tests across 22 repositories**. Test totals 
 
 | Project | Decision to inspect | Tests | Publication |
 |---|---|---:|---|
-| Retail Demand Backtest | Which model should supply SKU/store replenishment inputs when promotions and missing history change? | 9 | prepared; repository creation pending |
+| [Retail Demand Backtest](https://github.com/VEDANT1602/retail-demand-backtest) | Which model should supply SKU/store replenishment inputs when promotions and missing history change? | 9 | published |
 | Credit Calibration Lab | When should a calibrated score be withheld or recalibrated instead of turning a ranking result into an approval rule? | 8 | prepared; repository creation pending |
 | Merchant Churn Cohorts | Does a model identify future merchant inactivity beyond tenure and cohort artifacts? | 9 | prepared; repository creation pending |
 | Batch Quality Triage | Should an operations model predict a quality score or prioritize costly batch failures? | 8 | prepared; repository creation pending |
@@ -36,14 +36,14 @@ The reviewed local run passes **214 tests across 22 repositories**. Test totals 
 | Fulfillment Task State | Do sequence windows distinguish pick/pack/wait/move states without leakage from the same simulated worker session? | 8 | prepared; repository creation pending |
 | Aisle Geometry Lab | Estimate a synthetic aisle direction only when two pixel-line fits have enough support. | 10 | prepared; repository creation pending |
 | Occupancy Event Counter | Count anonymous directional crossings once despite pauses, short occlusion and duplicate frames. | 11 | prepared; repository creation pending |
-| Claims Multilabel Signals | Predict co-occurring fictional review reasons without hiding rare-label support behind one threshold. | 11 | prepared; repository creation pending |
+| [Claims Multilabel Signals](https://github.com/VEDANT1602/claims-multilabel-signals) | Predict co-occurring fictional review reasons without hiding rare-label support behind one threshold. | 11 | published |
 
 ## 500-project index: two additional engineering questions
 
 | Project | Decision to inspect | Tests | Publication |
 |---|---|---:|---|
 | Inventory Bellman Lab | Choose replenishment orders while tracking the two-period pipeline and finite horizon. | 9 | prepared; repository creation pending |
-| Checkpoint Integrity Lab | Resume the same training trajectory after rejecting newer incomplete or corrupt snapshots. | 10 | prepared; repository creation pending |
+| [Checkpoint Integrity Lab](https://github.com/VEDANT1602/checkpoint-integrity-lab) | Resume the same training trajectory after rejecting newer incomplete or corrupt snapshots. | 10 | published |
 
 ## Choose a work sample for a role
 

@@ -1,10 +1,12 @@
 # Vedant Thaker: repository directory
 
+**For a short route through the portfolio, open [selected work by experience](selected-work-by-experience.md).** It pairs two related independent implementations with each of three professional areas and keeps earlier projects and credits traceable.
+
 The portfolio has focused repositories as well as the original collection. New work has its own problem statement, source, data contract and measured result. Earlier projects retain their original history and credits.
 
 ## November 9: twenty-two new repositories
 
-The [new case-study directory](new-projects-2026-11-09.md) records all 22 implemented projects, their engineering decisions and tests. Ten separate repositories are published; twelve are prepared locally, with repository creation pending GitHub's cooldown. It contains ten original redesigns inspired by AI Project Gallery, ten by Machine-Learning-Projects, and two additional projects informed by the 500-project index. The [source map](project-source-map.json) pins references and explains the conceptual-only reuse boundary. Role-specific starting points cover fulfillment, risk, analytics, applied AI, vision and ML infrastructure.
+The [new case-study directory](new-projects-2026-11-09.md) records all 22 implemented projects, their engineering decisions and tests. Thirteen separate repositories are published; nine remain prepared locally for a later selected batch. It contains ten original redesigns inspired by AI Project Gallery, ten by Machine-Learning-Projects, and two additional projects informed by the 500-project index. The [source map](project-source-map.json) pins references and explains the conceptual-only reuse boundary. Role-specific starting points cover fulfillment, risk, analytics, applied AI, vision and ML infrastructure.
 
 ## Fulfillment and agent systems
 
