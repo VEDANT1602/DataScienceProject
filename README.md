@@ -14,12 +14,12 @@ The [Engineering Portfolio](docs/engineering-portfolio.md) follows three connect
 
 | Project | Decision | What to inspect |
 | --- | --- | --- |
-| [Evidence Gate](projects/evidence-gate/) | When should a document assistant answer, and when should it abstain? | Retrieval, evidence authority, validity windows, tenant boundaries, evaluation and a local API |
+| [Evidence Gate](https://github.com/VEDANT1602/evidence-gate) | When should a document assistant answer, and when should it abstain? | Retrieval, evidence authority, validity windows, tenant boundaries, evaluation and a local API |
 | [Point-in-time Risk](projects/point-in-time-risk/) | Which events deserve a limited review budget using only information available at scoring time? | Event replay, delayed labels, temporal features, model comparison, restart behavior and drift |
-| [Temporal Recommendations](projects/temporal-recommendations/) | Does a learned ranker improve future-item retrieval over a simple popularity baseline? | PyTorch training, chronological evaluation, full-catalog ranking, coverage and cold-start limits |
+| [Temporal Recommendations](https://github.com/VEDANT1602/temporal-recommendations) | Does a learned ranker improve future-item retrieval over a simple popularity baseline? | PyTorch training, chronological evaluation, full-catalog ranking, coverage and cold-start limits |
 | [Graph Risk Investigations](projects/graph-risk-investigations/) | Do prior entity connections improve a fixed-capacity fraud review queue? | Leakage controls, graph features, entity-disjoint evaluation, drift and analyst evidence cards |
 | [Approval Workflow Lab](projects/approval-workflow-lab/) | How can a tool execute exactly the transaction a separate reviewer approved? | Signed approvals, tenant-isolated SQL, atomic audit, replay protection and concurrency |
-| [Inference Systems Lab](projects/inference-systems-lab/) | Can a serving comparison survive malformed answers, fallback and missing measurements? | Streaming vLLM/Nebius adapters, quality gates, KV-cache arithmetic, NVIDIA runbook and a free GPU notebook |
+| [Inference Systems Lab](https://github.com/VEDANT1602/inference-systems-lab) | Can a serving comparison survive malformed answers, fallback and missing measurements? | Streaming vLLM/Nebius adapters, quality gates, KV-cache arithmetic, NVIDIA runbook and a free GPU notebook |
 
 These are independent portfolio implementations created in November 2026. They demonstrate engineering methods relevant to my professional interests; they do not reproduce employer or customer systems, verify historical workplace metrics, or imply customer deployment.
 

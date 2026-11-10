@@ -8,6 +8,16 @@ The portfolio has focused repositories as well as the original collection. New w
 
 The [new case-study directory](new-projects-2026-11-09.md) records all 22 implemented projects, their engineering decisions and tests. Thirteen separate repositories are published; nine remain prepared locally. It contains ten original redesigns inspired by AI Project Gallery, ten by Machine-Learning-Projects, and two additional projects informed by the 500-project index. The [source map](project-source-map.json) pins references and explains the conceptual-only reuse boundary. The projects span fulfillment, risk, analytics, applied AI, vision and ML infrastructure.
 
+## Direct repositories from the original collection
+
+| Repository | Engineering focus |
+| --- | --- |
+| [Temporal Recommendations](https://github.com/VEDANT1602/temporal-recommendations) | PyTorch ranking, chronological full-catalog evaluation and cold-start coverage. |
+| [Inference Systems Lab](https://github.com/VEDANT1602/inference-systems-lab) | Streaming contracts, quality gates, KV-cache checks and the recorded small free-T4 attention experiment. |
+| [Evidence Gate](https://github.com/VEDANT1602/evidence-gate) | Evidence-aware retrieval with authorization, validity, citation and abstention contracts. |
+
+These are standalone forms of existing public implementations in the six-project collection. Their original project history, code, data and recorded results are preserved. The implementation counts include each project once; the collection remains available at its original links.
+
 ## Fulfillment and agent systems
 
 | Repository | Engineering question | Evidence boundary |
