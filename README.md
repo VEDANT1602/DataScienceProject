@@ -1,18 +1,28 @@
 # Vedant Thaker | Applied AI and Decision Systems
 
-My work spans fraud review, recommendation systems and applied AI. This portfolio collects independent experiments with data and results you can inspect.
+My first notebook in this collection explored the Netflix catalog in 2021. The newer work asks questions that come up when a model has to support a decision. One example is the [MovieLens recommender](https://github.com/VEDANT1602/temporal-recommendations): before comparing two rankings, it matters whether either model can score the user’s next item at all. [Original notebook commit](https://github.com/VEDANT1602/DataScienceProject/commit/a52fa4d2b60274a6d975cbbd10b75d89a8ebc8cf)
 
-The tables below link each engineering question to a comparison and its data. Several of the more complex models lost to their simpler baselines.
+The [engineering portfolio](docs/engineering-portfolio.md) covers recommendations and fulfillment, fraud review, and inference. Use the [repository directory](docs/repository-directory.md) to find a standalone implementation. The [case-study index](docs/new-projects-2026-11-09.md) tracks the 13 published and nine locally prepared entries in the November collection.
 
-The [Engineering Portfolio](docs/engineering-portfolio.md) follows three connected areas of my work: recommendation and fulfillment systems, fraud and claims review, and inference and training systems. It brings the problem, implementation and recorded outcome together for each project.
+## Research working papers
 
-**Looking for a separate repository?** Use the [repository directory](docs/repository-directory.md). It groups fulfillment planning, policy evaluation, agent recovery, decision memory, fraud modeling, ETA and search-ranking projects, plus all five restored earlier repositories.
+These manuscripts are dated November 18, 2026. I posted the drafts, code and results on GitHub the following day while preparing the papers for submission.
 
-**New: [22 original engineering case studies](docs/new-projects-2026-11-09.md)** covering demand and inventory, calibrated risk, document workflows, product analytics, vision methods and checkpoint recovery. Thirteen repositories are published; nine remain prepared locally. The [source map](docs/project-source-map.json) records ten distinct inspirations from each project gallery and two from the 500-project index, with each entry's publication state and evidence limits.
+**A delivery receipt for two-robot dispatch under uncertain package identity.** Across 1,800 simulated layouts, reaching the dock and delivering the requested parcel are scored separately. [Paper (PDF)](https://github.com/VEDANT1602/verified-robot-dispatch/blob/cfa7da95805570aed7f4af10f1a07f8bc11f7fe7/manuscript.pdf) · [Analysis code](https://github.com/VEDANT1602/verified-robot-dispatch/blob/cfa7da95805570aed7f4af10f1a07f8bc11f7fe7/run.py) · [Results](https://github.com/VEDANT1602/verified-robot-dispatch/blob/cfa7da95805570aed7f4af10f1a07f8bc11f7fe7/results.csv)
+
+**When does waiting repay the cost of a carbon forecast?** A replay of public AWS request counts tests when the modeled emissions saved by delaying jobs cover the cost of consulting a forecast. [Paper (PDF)](https://github.com/VEDANT1602/carbon-aware-scheduling-replay/blob/01da64f9a7bd3ba6a6ffc9521fbacc4927f3383b/manuscript.pdf) · [Analysis code](https://github.com/VEDANT1602/carbon-aware-scheduling-replay/blob/01da64f9a7bd3ba6a6ffc9521fbacc4927f3383b/run.py) · [Results](https://github.com/VEDANT1602/carbon-aware-scheduling-replay/blob/01da64f9a7bd3ba6a6ffc9521fbacc4927f3383b/results.csv)
+
+**Which analysis choices let a reader recover a materials result?** Replaying 24 analyses of the same NIST copper measurements shows when changing the holdout or weighting changes the winning model. [Paper (PDF)](https://github.com/VEDANT1602/materials-workflow-replay/blob/5b31e983811775ebf911336911e1c3a743035624/manuscript.pdf) · [Analysis code](https://github.com/VEDANT1602/materials-workflow-replay/blob/5b31e983811775ebf911336911e1c3a743035624/run.py) · [Results](https://github.com/VEDANT1602/materials-workflow-replay/blob/5b31e983811775ebf911336911e1c3a743035624/results.csv)
+
+## Earlier projects revisited on November 19
+
+For FormVision, the February 2025 commit already contains the pose notebooks and videos. The November update points from the rep-counting rules to the annotated clip. [Original implementation](https://github.com/VEDANT1602/FormVision/commit/6cca5261bcc026f2716690c66a53c3795b59cc8b) · [Documentation update](https://github.com/VEDANT1602/FormVision/commit/1ae9e609ea4f5bf83911884018f87f0534ad02f2)
+
+The spoken-digit classifier also dates to 2025. The November revision repaired the audio entry points and added a fresh evaluation on the supplied recording split. [August source](https://github.com/VEDANT1602/spoken-digit-classifier/commit/f232c8b94efc8985df87815f4051f8097dd62ac8) · [November revision and run record](https://github.com/VEDANT1602/spoken-digit-classifier/commit/7731e9c853431055c570c727b9308d4ab76c1462)
 
 ## Start with a problem
 
-| Project | Decision | What to inspect |
+| Project | Engineering question | Where to look |
 | --- | --- | --- |
 | [Evidence Gate](https://github.com/VEDANT1602/evidence-gate) | When should a document assistant answer, and when should it abstain? | Retrieval, evidence authority, validity windows, tenant boundaries, evaluation and a local API |
 | [Point-in-time Risk](projects/point-in-time-risk/) | Which events deserve a limited review budget using only information available at scoring time? | Event replay, delayed labels, temporal features, model comparison, restart behavior and drift |
@@ -37,9 +47,9 @@ These are independent portfolio implementations created in November 2026. They d
 
 Full denominators, uncertainty, raw evaluation outputs and limitations are in the linked case studies. These results were measured on the included fictional data or the declared public-data protocol.
 
-## Reading an experiment
+## What a second run should test
 
-For fraud, start with one held-out prediction and the timestamp of the most recent input edge. For recommendations, check whether the user and target were eligible before reading NDCG. Inference has two separate records: the loopback client traces and the tiny T4 arithmetic run.
+For graph-based fraud review, only one of the nine additional positive reviews came after the simulated shift. Another shift window would test whether that gain holds. For recommendations, I’d report ranking quality and the count of eligible held-out ratings together from the first run. A score on warm users alone leaves out most of the positive targets in this split.
 
 No paid API is required for the checked-in experiments. Five projects use original fictional/synthetic fixtures or local tensor arithmetic. Recommendations uses MovieLens under its research terms; its download script retrieves the data from GroupLens rather than redistributing it here.
 
