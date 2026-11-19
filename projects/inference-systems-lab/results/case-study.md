@@ -1,65 +1,45 @@
-# The measurement contract works; GPU and provider performance remain unmeasured
+# Streaming measurements from the loopback fixture
 
-## The topic: inference performance
+The server returns known answers. This run checks whether the client records admission, first content, completion, task quality and retry costs consistently. Its timings belong to the fixture and client on this host.
 
-A fast answer is useful only if it is complete, correct for the task, and delivered within the declared operating limit. I built this lab to make those conditions visible before choosing a hosting or caching strategy.
+## Which requests finished within the serving contract?
 
-### The narrower question
+The batch scheduled 12 requests at concurrency 2. Across 12 attempts, 12 requests completed the stream, 12 returned an accepted schema and label, and 12 met the post-admission latency limits as well.
 
-Can I trust the serving measurements enough to decide what to benchmark on GPU next? The implemented boundary covers streamed transport, admission queues, schema/label quality, fallback attempts and cost assumptions.
-
-## The ordinary shortcut hides two problems
-
-A client can time a whole response and call it latency. It can also count streamed events and treat each event as a generated token. Neither tells me when useful content first arrived or whether one event contained several tokens. Averaging only successful requests additionally hides failures and rejected answers.
-
-## My approach: an explicit measurement contract
-
-I keep transport completion, task quality and SLO acceptance separate. The fixed batch has a bounded number of active workers; client queue time is recorded separately from post-admission response time. Fallback traces retain every attempt, including time and known usage from a rejected primary answer.
-
-The client reports time to first nonempty content as a TTFT proxy and records gaps between content chunks. True inter-token latency stays null because this wire protocol does not guarantee one token per chunk. Provider token usage is a separate billing counter, not a timing trace.
-
-## What I executed
-
-The loopback server emits known answers from a lookup table. Its timings exercise the client and cannot rank vLLM, Nebius or GPUs.
-
-| Measure | Executed observation |
+| Batch observation | Value |
 | --- | ---: |
-| Scheduled requests | 12 |
-| HTTP/stream completions | 12/12 |
-| Correct schema and label | 12/12 |
-| Declared post-admission SLO passed | 12/12 |
-| Total attempts | 12 |
-| First-content proxy p50 / p95, ms, accepted answers | 6.306 / 8.565 |
-| E2E p50 / p95, ms, all requests | 17.040 / 19.717 |
-| True inter-token latency | Not identifiable from content chunks |
+| HTTP and stream completions | 12/12 |
+| Correct responses | 12/12 |
+| Responses meeting the SLO | 12/12 |
+| First nonempty content, accepted answers, p50 / p95 | 6.306 / 8.565 ms |
+| Post-admission end-to-end latency, all requests, p50 / p95 | 17.040 / 19.717 ms |
 
-### A separate arithmetic experiment
+First content is measured when a nonempty chunk arrives. A chunk may contain several tokens, so inter-token latency is unknown. The all-request end-to-end denominator retains failed and rejected answers. The trace records client queue time separately, and a retry retains the failed attempt's time and known usage.
 
-I ran an untrained causal-attention layer on **Intel64 Family 6 Model 78 Stepping 3, GenuineIntel**, using float32, width 64, 4 heads, 64 prefix positions and 24 decode positions. It compares full-context recomputation with projected key/value reuse, including prefill in the cached path.
+[Per-request and per-attempt traces](traces.jsonl)
 
-The two paths agreed within tolerance: **True**; maximum absolute difference was **5.2154064e-08**. After 2 warmups, the median across 7 repetitions was **12.064 ms** for full recomputation and **4.107 ms** for the cached path.
+## A separate tensor calculation
 
-This is an arithmetic and measurement check. Random, untrained weights and tiny tensor timings cannot establish vLLM serving speed, LLM answer quality, production cost savings or the benefit of paged attention. The CUDA implementation uses synchronized events and NVTX ranges; inspect the recorded device before calling any observation a GPU result.
+The recorded device is **Intel64 Family 6 Model 78 Stepping 3, GenuineIntel**, with dtype float32, width 64 and 4 attention heads. Both paths use a prefix of 64 positions and decode 24 positions. The cached path includes prefill.
 
-## Cost is a declared model, not a provider bill
+The two implementations agree at the declared tolerance on these inputs. Maximum absolute difference was **5.2154064e-08**. After 2 warmups, 7 repetitions gave medians of **12.064 ms** for dense recomputation and **4.107 ms** with projected KV reuse.
 
-Primary input/output assumptions per million tokens: **1.000 / 2.000**. Dedicated hourly assumption: **1.000**. These are manual assumptions; the fixture uses illustrative values, not published Nebius or NVIDIA prices.
+The benchmark uses a single untrained attention layer. It times tensor operations and omits the scheduler, tokenizer and trained model needed for an end-to-end serving comparison.
 
-Every attempt has usage available: **True**. The resulting economic-only break-even is **3.655 requests/second**. It is N/A when required usage or prices are unavailable; a zero or missing bill is not inferred. Cached-input discounts, reserved pricing, idle capacity, networking and staff costs are outside this simple rate model. Real fallback pricing must be supplied separately.
+## What goes into the cost estimate?
 
-Even a valid economic crossing is insufficient: the dedicated deployment must actually sustain that load while satisfying the same quality and latency gates. That capacity and SLO feasibility is not established here.
+The entered input and output rates per million tokens are 1.000 and 2.000. The entered dedicated hourly rate is 1.000. Complete usage for all attempts: True.
 
-## The result changes the next experiment
+The economic break-even under those inputs is **3.655 requests per second**. A missing rate or usage needed for the calculation leaves the estimate unavailable. A deployment would also have to sustain that rate at the same quality and tail-latency limits. The fixture's illustrative rates cannot establish a provider price or a capacity result.
 
-My recommendation is to use this lab as a measurement gate, then run the declared workload against a pinned vLLM deployment and a separately configured Nebius endpoint. Use a fresh vLLM process for the cold condition, repeat the same prefix for the warm condition, retain cache-hit evidence, and compare multiple repetitions under the same concurrency and output limit. Phase labels alone do not prove a cache reset or cache hit.
+## Evidence for a serving comparison
 
-Read correctness flags and failure denominators before interpreting any timing. The committed local artifact checks fixture transport and tiny CPU tensor arithmetic. It is insufficient to select a GPU, a provider or an operating break-even for a real workload.
-
-## Inspect and reproduce
+To test prefix caching, pair a fresh-process run with repeated-prefix requests and record cache state alongside both traces. A phase label alone cannot establish a reset or a hit. Keep the same workload, output limit and concurrency for both conditions.
 
 - [Workload and data card](../data/DATA_CARD.md)
-- [GPU, vLLM and Nebius runbook](../docs/gpu-runbook.md)
+- [GPU and endpoint runbook](../docs/gpu-runbook.md)
 - [Metric definitions](../docs/measurement-contract.md)
-- [Numerical source](metrics.json) and [raw per-request traces](traces.jsonl)
+- [Separate archived T4 attention run](colab-t4/README.md)
+- [Metrics and execution environment for this run](metrics.json)
 
-This is new independent portfolio work by Vedant Thaker. It does not reproduce private employer/client infrastructure or validate historical business, audience or adoption figures.
+Independent systems experiment by Vedant Thaker.

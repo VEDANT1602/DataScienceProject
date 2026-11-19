@@ -1,6 +1,6 @@
 # Point-in-time Risk
 
-**A fraud-review experiment where the clock, replay behavior and review capacity are part of the model contract.**
+On the synthetic holdout, the event-time queue found 23 positive outcomes in 142 reviews. The baseline found 21 at the same capacity. The shifted-period queues tied. [Holdout predictions](artifacts/test_predictions.csv)
 
 This is new independent portfolio work by Vedant Thaker. It demonstrates event-time feature engineering and evaluation discipline using **original synthetic transactions**. It does not reproduce an employer/client system or claim real fraud reduction.
 

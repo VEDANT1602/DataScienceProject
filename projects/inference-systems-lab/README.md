@@ -1,10 +1,8 @@
 # Inference Systems Lab
 
-**A serving benchmark is useful only after its measurement contract survives failure.**
+A streaming server can finish a request and still return an answer that fails the task. Another request can succeed on fallback while consuming two attempts. The [recorded traces](results/traces.jsonl) let you follow both paths through the client, including admission, content arrival and validation.
 
-I built this independent lab to connect three questions that are often measured separately: did the streamed request finish, was the answer acceptable, and could the deployment deliver it within a declared latency and cost limit?
-
-The narrower engineering problem is easy to miss. A streaming event can contain several tokens. A fast malformed answer can pass a latency chart. A fallback can improve quality while quietly doubling attempts. I wanted a runnable way to expose each of those cases before recommending a GPU or serving provider.
+The hardware measurement is a separate experiment. A free Tesla T4 ran one untrained attention layer with and without KV reuse. The [seven trial timings](results/colab-t4/) cover that arithmetic. End-to-end vLLM and Nebius serving performance remains an open measurement.
 
 ## What the code does
 

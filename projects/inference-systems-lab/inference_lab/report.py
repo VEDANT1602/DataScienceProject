@@ -28,52 +28,70 @@ def number(value, places=3):
 def render(output: Path):
     data = json.loads((output / "metrics.json").read_text(encoding="utf-8"))
     protocol, kv = data.get("endpoint_run"), data.get("attention_run")
-    executed_protocol = protocol is not None
     fixture = data["execution_kind"] == "loopback_protocol_fixture"
-    headline = "The measurement contract works; GPU and provider performance remain unmeasured" if fixture else "Inspect quality and failure denominators before selecting a serving configuration"
-    paragraph = "The loopback server emits known answers from a lookup table. Its timings exercise the client and cannot rank vLLM, Nebius or GPUs." if fixture else "This run sent the original fictional workload to the explicitly configured endpoint. Results describe this endpoint, model, workload and concurrency; they do not establish cross-provider superiority."
-    lines = [f"# {headline}", "", "## The topic: inference performance", "",
-             "A fast answer is useful only if it is complete, correct for the task, and delivered within the declared operating limit. I built this lab to make those conditions visible before choosing a hosting or caching strategy.", "",
-             "### The narrower question", "",
-             "Can I trust the serving measurements enough to decide what to benchmark on GPU next? The implemented boundary covers streamed transport, admission queues, schema/label quality, fallback attempts and cost assumptions.", "",
-             "## The ordinary shortcut hides two problems", "",
-             "A client can time a whole response and call it latency. It can also count streamed events and treat each event as a generated token. Neither tells me when useful content first arrived or whether one event contained several tokens. Averaging only successful requests additionally hides failures and rejected answers.", "",
-             "## My approach: an explicit measurement contract", "",
-             "I keep transport completion, task quality and SLO acceptance separate. The fixed batch has a bounded number of active workers; client queue time is recorded separately from post-admission response time. Fallback traces retain every attempt, including time and known usage from a rejected primary answer.", "",
-             "The client reports time to first nonempty content as a TTFT proxy and records gaps between content chunks. True inter-token latency stays null because this wire protocol does not guarantee one token per chunk. Provider token usage is a separate billing counter, not a timing trace.", "",
-             "## What I executed", "", paragraph, ""]
-    if executed_protocol:
-        lines.extend(["| Measure | Executed observation |", "| --- | ---: |",
-                      f"| Scheduled requests | {protocol['requests']} |",
-                      f"| HTTP/stream completions | {protocol['transport_successes']}/{protocol['requests']} |",
-                      f"| Correct schema and label | {protocol['quality_successes']}/{protocol['requests']} |",
-                      f"| Declared post-admission SLO passed | {protocol['slo_successes']}/{protocol['requests']} |",
-                      f"| Total attempts | {protocol['attempts']} |",
-                      f"| First-content proxy p50 / p95, ms, accepted answers | {number(protocol['ttft_proxy_successes_ms']['p50'])} / {number(protocol['ttft_proxy_successes_ms']['p95'])} |",
-                      f"| E2E p50 / p95, ms, all requests | {number(protocol['e2e_all_requests_ms']['p50'])} / {number(protocol['e2e_all_requests_ms']['p95'])} |",
-                      f"| True inter-token latency | Not identifiable from content chunks |", ""])
-    if kv and kv.get("status") == "executed":
-        lines.extend(["### A separate arithmetic experiment", "",
-                      f"I ran an untrained causal-attention layer on **{kv['device_name']}**, using {kv['dtype']}, width {kv['width']}, {kv['heads']} heads, {kv['prefix_positions']} prefix positions and {kv['decode_positions']} decode positions. It compares full-context recomputation with projected key/value reuse, including prefill in the cached path.", "",
-                      f"The two paths agreed within tolerance: **{kv['correctness']['allclose']}**; maximum absolute difference was **{kv['correctness']['max_absolute_error']:.8g}**. After {kv['warmup_runs']} warmups, the median across {kv['repeats']} repetitions was **{number(kv['median_full_recompute_ms'])} ms** for full recomputation and **{number(kv['median_kv_cached_ms'])} ms** for the cached path.", "",
-                      "This is an arithmetic and measurement check. Random, untrained weights and tiny tensor timings cannot establish vLLM serving speed, LLM answer quality, production cost savings or the benefit of paged attention. The CUDA implementation uses synchronized events and NVTX ranges; inspect the recorded device before calling any observation a GPU result.", ""])
+    if fixture:
+        title = "Streaming measurements from the loopback fixture"
+        context = ("The server returns known answers. This run checks whether the client records admission, "
+                   "first content, completion, task quality and retry costs consistently. Its timings belong "
+                   "to the fixture and client on this host.")
     else:
-        lines.extend(["The CUDA attention experiment is not executed in this artifact.", ""])
+        title = "Streaming measurements from the configured endpoint"
+        context = ("The client sent the fictional evaluation workload to the configured endpoint. "
+                   "These results describe this model, concurrency and operating condition.")
+    lines = [f"# {title}", "", context, ""]
+    if protocol:
+        lines.extend(["## Which requests finished within the serving contract?", "",
+                      f"The batch scheduled {protocol['requests']} requests at concurrency {protocol['concurrency']}. "
+                      f"Across {protocol['attempts']} attempts, {protocol['transport_successes']} requests completed the stream, "
+                      f"{protocol['quality_successes']} returned an accepted schema and label, and "
+                      f"{protocol['slo_successes']} met the post-admission latency limits as well.", "",
+                      "| Batch observation | Value |", "| --- | ---: |",
+                      f"| HTTP and stream completions | {protocol['transport_successes']}/{protocol['requests']} |",
+                      f"| Correct responses | {protocol['quality_successes']}/{protocol['requests']} |",
+                      f"| Responses meeting the SLO | {protocol['slo_successes']}/{protocol['requests']} |",
+                      f"| First nonempty content, accepted answers, p50 / p95 | {number(protocol['ttft_proxy_successes_ms']['p50'])} / {number(protocol['ttft_proxy_successes_ms']['p95'])} ms |",
+                      f"| Post-admission end-to-end latency, all requests, p50 / p95 | {number(protocol['e2e_all_requests_ms']['p50'])} / {number(protocol['e2e_all_requests_ms']['p95'])} ms |",
+                      "", "First content is measured when a nonempty chunk arrives. A chunk may contain several tokens, "
+                      "so inter-token latency is unknown. The all-request end-to-end denominator retains failed and rejected answers. "
+                      "The trace records client queue time separately, and a retry retains the failed attempt's time and known usage.",
+                      "", "[Per-request and per-attempt traces](traces.jsonl)", ""])
+    if kv and kv.get("status") == "executed":
+        correctness = kv["correctness"]
+        interpretation = ("The two implementations agree at the declared tolerance on these inputs."
+                          if correctness["allclose"] else
+                          "The two implementations fail the declared tolerance. The timings cannot support a comparison of equivalent outputs.")
+        lines.extend(["## A separate tensor calculation", "",
+                      f"The recorded device is **{kv['device_name']}**, with dtype {kv['dtype']}, width {kv['width']} "
+                      f"and {kv['heads']} attention heads. Both paths use a prefix of {kv['prefix_positions']} positions "
+                      f"and decode {kv['decode_positions']} positions. The cached path includes prefill.", "",
+                      f"{interpretation} Maximum absolute difference was **{correctness['max_absolute_error']:.8g}**. "
+                      f"After {kv['warmup_runs']} warmups, {kv['repeats']} repetitions gave medians of "
+                      f"**{number(kv['median_full_recompute_ms'])} ms** for dense recomputation and "
+                      f"**{number(kv['median_kv_cached_ms'])} ms** with projected KV reuse.", "",
+                      "The benchmark uses a single untrained attention layer. It times tensor operations and "
+                      "omits the scheduler, tokenizer and trained model needed for an end-to-end serving comparison.", ""])
+    else:
+        lines.extend(["This run contains no executed attention measurement.", ""])
     if protocol:
         cost = protocol["cost"]
-        lines.extend(["## Cost is a declared model, not a provider bill", "",
-                      f"Primary input/output assumptions per million tokens: **{number(cost['input_per_million_assumption'])} / {number(cost['output_per_million_assumption'])}**. Dedicated hourly assumption: **{number(cost['dedicated_hourly_assumption'])}**. These are manual assumptions; the fixture uses illustrative values, not published Nebius or NVIDIA prices.", "",
-                      f"Every attempt has usage available: **{cost['all_attempt_usage_known']}**. The resulting economic-only break-even is **{number(cost['economic_break_even_requests_per_second'])} requests/second**. It is N/A when required usage or prices are unavailable; a zero or missing bill is not inferred. Cached-input discounts, reserved pricing, idle capacity, networking and staff costs are outside this simple rate model. Real fallback pricing must be supplied separately.", "",
-                      "Even a valid economic crossing is insufficient: the dedicated deployment must actually sustain that load while satisfying the same quality and latency gates. That capacity and SLO feasibility is not established here.", ""])
-    lines.extend(["## The result changes the next experiment", "",
-                  "My recommendation is to use this lab as a measurement gate, then run the declared workload against a pinned vLLM deployment and a separately configured Nebius endpoint. Use a fresh vLLM process for the cold condition, repeat the same prefix for the warm condition, retain cache-hit evidence, and compare multiple repetitions under the same concurrency and output limit. Phase labels alone do not prove a cache reset or cache hit.", "",
-                  "Read correctness flags and failure denominators before interpreting any timing. The committed local artifact checks fixture transport and tiny CPU tensor arithmetic. It is insufficient to select a GPU, a provider or an operating break-even for a real workload.", "",
-                  "## Inspect and reproduce", "",
+        lines.extend(["## What goes into the cost estimate?", "",
+                      f"The entered input and output rates per million tokens are {number(cost['input_per_million_assumption'])} "
+                      f"and {number(cost['output_per_million_assumption'])}. The entered dedicated hourly rate is "
+                      f"{number(cost['dedicated_hourly_assumption'])}. Complete usage for all attempts: {cost['all_attempt_usage_known']}.", "",
+                      f"The economic break-even under those inputs is **{number(cost['economic_break_even_requests_per_second'])} "
+                      "requests per second**. A missing rate or usage needed for the calculation leaves the estimate unavailable. "
+                      "A deployment would also have to sustain that rate at the same quality and tail-latency limits. "
+                      "The fixture's illustrative rates cannot establish a provider price or a capacity result.", ""])
+    lines.extend(["## Evidence for a serving comparison", "",
+                  "To test prefix caching, pair a fresh-process run with repeated-prefix requests and record cache state "
+                  "alongside both traces. A phase label alone cannot establish a reset or a hit. Keep the same workload, "
+                  "output limit and concurrency for both conditions.", "",
                   f"- [Workload and data card]({link(PROJECT / 'data' / 'DATA_CARD.md', output)})",
-                  f"- [GPU, vLLM and Nebius runbook]({link(PROJECT / 'docs' / 'gpu-runbook.md', output)})",
+                  f"- [GPU and endpoint runbook]({link(PROJECT / 'docs' / 'gpu-runbook.md', output)})",
                   f"- [Metric definitions]({link(PROJECT / 'docs' / 'measurement-contract.md', output)})",
-                  "- [Numerical source](metrics.json) and [raw per-request traces](traces.jsonl)", "",
-                  "This is new independent portfolio work by Vedant Thaker. It does not reproduce private employer/client infrastructure or validate historical business, audience or adoption figures.", ""])
+                  f"- [Separate archived T4 attention run]({link(PROJECT / 'results' / 'colab-t4' / 'README.md', output)})",
+                  "- [Metrics and execution environment for this run](metrics.json)", "",
+                  "Independent systems experiment by Vedant Thaker.", ""])
     (output / "case-study.md").write_bytes("\n".join(lines).encode("utf-8"))
     if kv and kv.get("status") == "executed":
         values = [kv["median_full_recompute_ms"], kv["median_kv_cached_ms"]]

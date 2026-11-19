@@ -49,7 +49,7 @@ These projects take conceptual direction from [Andres Vourakis's discussion of p
 | [Heart Disease Prediction](https://github.com/VEDANT1602/Heart-Disease-Prediction-System) | Original multimodal CNN/XGBoost pipeline; expected training data is absent and no clinical validation is claimed. |
 | [Car Price Prediction](https://github.com/VEDANT1602/Sales-Prediction-of-Cars-using-ML) | Original co-authored ASU report. Divyesh Rathod, Meet Shah and Vedant Thaker retain their credits; runnable source/data is not bundled in that repository. |
 
-Each restored `main` branch points to the same original source commit as the corresponding Vedant160297 repository. The [archive manifest](../legacy/migration-manifest.json) records those commits and all 35 file hashes. The existing [archive collection](../legacy/) remains as an additional preserved snapshot.
+Each restored repository retains its original Vedant160297 commits. Later documentation and runnable fixes are tracked in the standalone copies. The [archive manifest](../legacy/migration-manifest.json) records those commits and all 35 file hashes. The existing [archive collection](../legacy/) remains as an additional preserved snapshot.
 
 ## The original six-project collection
 

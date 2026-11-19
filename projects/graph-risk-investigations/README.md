@@ -10,7 +10,7 @@ This is new portfolio work created in November 2026, with original synthetic dat
 
 ## Read the story and inspect the evidence
 
-- [Executed case study](reports/case-study.md): topic, ordinary workflow, failure mode, design, measured outcome, tradeoff and next decision.
+- [Executed case study](reports/case-study.md): review counts with and without prior graph context, including the period after the simulated shift.
 - [Numerical source of truth](reports/metrics.json) and [every held-out prediction](reports/predictions.csv).
 - [Analyst evidence cards](reports/investigation-cards.json), which intentionally omit outcome labels.
 - [Original packaged dataset](reports/data/transactions.csv.gz), [manifest](reports/data/manifest.json) and [data card](DATA_CARD.md).

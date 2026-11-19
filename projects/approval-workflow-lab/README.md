@@ -12,7 +12,7 @@ A useful support assistant needs to read account data, compute a few operational
 
 I narrowed the experiment to that question. The model is deliberately outside the experiment. A deterministic router selects registered tools from typed intents, while the workflow service decides whether a proposed state change may execute. The same checks apply whether the caller is a script, a future model adapter, or an application route.
 
-## The framework I implemented
+## From signed approval to execution receipt
 
 ```text
 Trusted application identity boundary

@@ -1,8 +1,8 @@
 # Vedant Thaker | Applied AI and Decision Systems
 
-I build around the decision a system needs to support: what evidence is available, what can go wrong, and what would make the next action defensible.
+My work spans fraud review, recommendation systems and applied AI. This portfolio collects independent experiments with data and results you can inspect.
 
-This portfolio turns that approach into runnable engineering work. Each project starts with a common workflow, exposes a specific failure mode, implements an alternative, and records the result of an actual experiment. The reports explain the reasoning; the code and run artifacts let you challenge it.
+The tables below link each engineering question to a comparison and its data. Several of the more complex models lost to their simpler baselines.
 
 The [Engineering Portfolio](docs/engineering-portfolio.md) follows three connected areas of my work: recommendation and fulfillment systems, fraud and claims review, and inference and training systems. It brings the problem, implementation and recorded outcome together for each project.
 
@@ -37,15 +37,9 @@ These are independent portfolio implementations created in November 2026. They d
 
 Full denominators, uncertainty, raw evaluation outputs and limitations are in the linked case studies. These results were measured on the included fictional data or the declared public-data protocol.
 
-## Read the story, then reproduce the result
+## Reading an experiment
 
-The project READMEs give setup and entry points. The case studies follow a common sequence:
-
-1. Introduce the topic and the narrower decision.
-2. Explain the usual approach and its failure modes.
-3. Show the evidence that motivated a different design.
-4. Compare the implementation with a stated baseline.
-5. Report measured outcomes, uncertainty, tradeoffs and the next decision.
+For fraud, start with one held-out prediction and the timestamp of the most recent input edge. For recommendations, check whether the user and target were eligible before reading NDCG. Inference has two separate records: the loopback client traces and the tiny T4 arithmetic run.
 
 No paid API is required for the checked-in experiments. Five projects use original fictional/synthetic fixtures or local tensor arithmetic. Recommendations uses MovieLens under its research terms; its download script retrieves the data from GroupLens rather than redistributing it here.
 
@@ -71,7 +65,7 @@ The last command reproduces five local experiments and a tiny original recommend
 
 [My engineering method](docs/engineering-method.md) explains the framing and evidence standard. [The project-to-skills map](docs/portfolio-map.md) shows which parts of the implementation demonstrate applied AI, ML systems and customer-facing engineering skills. [The LinkedIn evidence map](docs/linkedin-evidence-map.md) connects public artifacts to professional methods and identifies which historical outcomes require their original records. [Provenance and attribution](docs/provenance.md) separates original implementation, conceptual references and dataset terms.
 
-The original [Netflix notebook](Netflix_Project-8.ipynb) remains available as earlier work. The six bundled projects above and the linked standalone repositories are the current starting points.
+The 2021 [Netflix exploration notebook](Netflix_Project-8.ipynb) retains its original cell outputs. Its first data-loading cell points to a local CSV outside this repository. The saved actor search spells ‘Tom Cruize’, so its empty result is unreliable. Re-running that analysis requires the original CSV or a schema-compatible licensed copy. The six bundled projects above and the linked standalone repositories are the current starting points.
 
 ## GPU, vLLM, NVIDIA and Nebius
 
