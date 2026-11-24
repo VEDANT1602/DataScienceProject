@@ -21,6 +21,11 @@ Public working-paper editions updated November 24, 2026.
 | [Two-station dispatch from ten tickets](https://github.com/VEDANT1602/verified-robot-dispatch/blob/main/manuscript.pdf) | Teaching note | August 2–13, 2026 | [Code and results](https://github.com/VEDANT1602/verified-robot-dispatch/tree/main/study) · [Preparation record](https://github.com/VEDANT1602/verified-robot-dispatch/blob/main/study/PREPARATION.md) |
 | [Timing a sixth contact in ellipse centering](https://github.com/VEDANT1602/aperture-contact-localization/blob/main/manuscript.pdf) | Worked geometry example | October 5–21, 2026 | [Code and results](https://github.com/VEDANT1602/aperture-contact-localization/tree/main/study) · [Preparation record](https://github.com/VEDANT1602/aperture-contact-localization/blob/main/study/PREPARATION.md) |
 
+### Computational benchmarks
+
+- [When final stopping distances miss the largest closure during braking](https://github.com/VEDANT1602/DataScienceProject/blob/master/research/braking-clearance/manuscript.pdf) · [Code, data sources and results](research/braking-clearance/study/README.md)
+- [Separating KV reuse from discarded outputs in a single-layer attention benchmark](https://github.com/VEDANT1602/DataScienceProject/blob/master/research/attention-baselines/manuscript.pdf) · [Code, measurements and results](research/attention-baselines/study/README.md)
+
 ## Earlier projects revisited on November 19
 
 For FormVision, the February 2025 commit already contains the pose notebooks and videos. The November update points from the rep-counting rules to the annotated clip. [Original implementation](https://github.com/VEDANT1602/FormVision/commit/6cca5261bcc026f2716690c66a53c3795b59cc8b) · [Documentation update](https://github.com/VEDANT1602/FormVision/commit/1ae9e609ea4f5bf83911884018f87f0534ad02f2)

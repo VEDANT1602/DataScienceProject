@@ -1,0 +1,24 @@
+{
+  "frames_in_query": 9000,
+  "conflicting_id_frames": 0,
+  "source_rows": 1172541,
+  "eligible_followers": 138,
+  "sampled": {
+    "over_1m": 7,
+    "max_m": 3.851148,
+    "median_m": 0.0,
+    "over_0.1m": 43
+  },
+  "five_sample_median": {
+    "over_1m": 5,
+    "max_m": 3.183026,
+    "median_m": 0.0,
+    "over_0.1m": 39
+  },
+  "near_stop_onset": {
+    "over_1m": 7,
+    "max_m": 3.851148,
+    "median_m": 0.0,
+    "over_0.1m": 31
+  }
+}

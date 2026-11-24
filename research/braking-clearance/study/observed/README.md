@@ -1,0 +1,19 @@
+# Paired trajectories approaching a common near-stop
+
+The primary analysis follows a stable lead/follower pair for five seconds before one second of shared low speeds. It compares the largest sampled approach in bumper-to-bumper clearance with the approach remaining at the end of the window. No force, impact severity, brake command, brake pressure, road friction or programmed onset ramp was observed.
+
+U.S. Department of Transportation, Federal Highway Administration (2016). *Next Generation Simulation (NGSIM) Vehicle Trajectories and Supporting Data* [dataset]. Provided by ITS DataHub through Data.transportation.gov. Accessed November 24, 2026. [Data and citation](https://doi.org/10.21949/1504477) · [Provider and field definitions](https://data.transportation.gov/api/views/8ect-6jqj).
+
+The provider lists [CC BY-SA 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/) for its trajectory dataset. Share this attribution with derived data. Changes here consist of filtering, joining synchronous leader and follower observations, converting feet to metres, calculating changes in separation and summarizing those changes across eligible approaches. This folder contains code, source-response checksums and numerical summaries. Retrieve the underlying rows from the provider. No upstream endorsement is implied.
+
+## Reproduce the reported result
+
+Run `python check_observed.py --cache /path/to/ngsim-cache` with Python 3.10 or later. A fresh run downloads thirty time-ordered 30-second CSV responses (about 85 MiB) to that directory. The program verifies all thirty SHA-256 hashes. An existing verified cache works offline. If the public data change, the original digests identify the input version and the check stops.
+
+The subset starts at the global timestamp assigned to frame 1 in the first eastbound Emeryville I-80 file, 1113433135000 ms. The half-open query spans frames 1–9,000; the first available trajectory observation starts at frame 4. The code checks the timestamp-to-frame relationship and query completeness. The response has 1,172,541 observations, unique by frame and vehicle.
+
+For each timestamp the follower must name the leader as its predecessor, and the leader must name the follower. They must be two passenger cars in the same lane. A missing 0.1 s observation, change of leader or lane, or nonpositive gap breaks the observation sequence. Subtract the leader's length from the difference between the two front-bumper coordinates. The first qualifying 61-sample window per follower is retained. Both speeds must be at least 1 m/s at its first sample and at most 0.5 m/s throughout its final 11 samples. The primary endpoint is the final sample. The shorter comparison ends at sample 51. The gap filter takes a centered median over five samples, shrinking to available in-window samples at the two edges. The original event selection is held fixed for both sensitivity checks.
+
+Of 138 qualifying followers, seven had a sampled transient-minus-endpoint excess above 1 m. The maximum was 3.851148 m. After median filtering, five still exceeded 1 m, with a maximum of 3.183026 m. All five were among the seven. Ending the window at near-stop onset yielded seven above 1 m and a maximum of 3.851148 m. The median excess across all 138 was zero for every rule. A separate frame-join and rolling-window implementation independently confirmed the sample count, three maxima, medians and all above-threshold counts in `observed-summary.json`.
+
+These are congested, video-derived trajectories from one site and recording period. Neighboring events can share vehicles and conditions. Partial stops, vehicle restarts, the speed threshold, finite sampling and position error affect the comparison. Selecting positive observed gaps precludes any observed-overlap rate. See Montanino & Punzo (2013) on NGSIM measurement error. [DOI](https://doi.org/10.3141/2390-11)

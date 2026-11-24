@@ -1,0 +1,654 @@
+{
+  "session": 1,
+  "start_utc": "2026-11-24T11:05:53.515113+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "processor": "",
+  "machine": "x86_64",
+  "python": "3.12.14",
+  "torch": "2.9.1+cpu",
+  "torch_threads": 1,
+  "torch_interop_threads": 1,
+  "affinity_cpu": 0,
+  "cuda_available": false,
+  "timing": "perf_counter_ns",
+  "warmups": 3,
+  "blocks": 12,
+  "design_seed": 20261125,
+  "input_seed": 42,
+  "dtype": "float32",
+  "script_sha256": "921d7dccf6377eb2145e5fd4d5f4626e36fed45819f0e27bf5a0aad7c9009817",
+  "model_source_sha256": "907bd82939912bed27663f32a3ebb13e324fdfa2989f6793cef5ad719d333914",
+  "torch_build": "PyTorch built with:\n  - GCC 13.3\n  - C++ Version: 201703\n  - Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.7.1 (Git Hash 8d263e693366ef8db40acc569cc7d8edf644556d)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX512\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=5811a8d7da873dd699ff6687092c225caffcf1bb, CXX_COMPILER=/opt/rh/gcc-toolset-13/root/usr/bin/c++, CXX_FLAGS= -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -DNDEBUG -DUSE_KINETO -DLIBKINETO_NOCUPTI -DLIBKINETO_NOROCTRACER -DLIBKINETO_NOXPUPTI=ON -DUSE_FBGEMM -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -O2 -fPIC -DC10_NODEPRECATED -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Werror=range-loop-construct -Werror=bool-operation -Wnarrowing -Wno-missing-field-initializers -Wno-unknown-pragmas -Wno-unused-parameter -Wno-strict-overflow -Wno-strict-aliasing -Wno-stringop-overflow -Wsuggest-override -Wno-psabi -Wno-error=old-style-cast -faligned-new -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-dangling-reference -Wno-error=dangling-reference -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.9.1, USE_CUDA=0, USE_CUDNN=OFF, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n",
+  "cases": [
+    {
+      "batch": 4,
+      "prefix": 256,
+      "decode": 32,
+      "width": 64,
+      "heads": 4,
+      "max_abs_error": {
+        "reproject": 4.470348358154297e-08,
+        "reuse": 4.842877388000488e-08
+      },
+      "trials": [
+        {
+          "block": 0,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 4179573
+        },
+        {
+          "block": 0,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 11709146
+        },
+        {
+          "block": 1,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 3796604
+        },
+        {
+          "block": 1,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 10944630
+        },
+        {
+          "block": 2,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 11548954
+        },
+        {
+          "block": 2,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3319454
+        },
+        {
+          "block": 3,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 11373999
+        },
+        {
+          "block": 3,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3257591
+        },
+        {
+          "block": 4,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 10766020
+        },
+        {
+          "block": 4,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3312693
+        },
+        {
+          "block": 5,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 3391382
+        },
+        {
+          "block": 5,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 11198484
+        },
+        {
+          "block": 6,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 10919672
+        },
+        {
+          "block": 6,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3598615
+        },
+        {
+          "block": 7,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 3420297
+        },
+        {
+          "block": 7,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 12575003
+        },
+        {
+          "block": 8,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 11529774
+        },
+        {
+          "block": 8,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3239323
+        },
+        {
+          "block": 9,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 4131861
+        },
+        {
+          "block": 9,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 10633511
+        },
+        {
+          "block": 10,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 3681811
+        },
+        {
+          "block": 10,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 10401390
+        },
+        {
+          "block": 11,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 11873413
+        },
+        {
+          "block": 11,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 4505756
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "prefix": 16,
+      "decode": 32,
+      "width": 64,
+      "heads": 4,
+      "max_abs_error": {
+        "reproject": 8.940696716308594e-08,
+        "reuse": 8.940696716308594e-08
+      },
+      "trials": [
+        {
+          "block": 0,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3789964
+        },
+        {
+          "block": 0,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2053311
+        },
+        {
+          "block": 1,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 2189707
+        },
+        {
+          "block": 1,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 3181906
+        },
+        {
+          "block": 2,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 1939019
+        },
+        {
+          "block": 2,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 3764951
+        },
+        {
+          "block": 3,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 2221946
+        },
+        {
+          "block": 3,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 3404312
+        },
+        {
+          "block": 4,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 2943616
+        },
+        {
+          "block": 4,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2169517
+        },
+        {
+          "block": 5,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3939109
+        },
+        {
+          "block": 5,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3115275
+        },
+        {
+          "block": 6,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3894752
+        },
+        {
+          "block": 6,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3186533
+        },
+        {
+          "block": 7,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 5100829
+        },
+        {
+          "block": 7,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 4827882
+        },
+        {
+          "block": 8,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3590543
+        },
+        {
+          "block": 8,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2237158
+        },
+        {
+          "block": 9,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 4061174
+        },
+        {
+          "block": 9,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 1882573
+        },
+        {
+          "block": 10,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 2274886
+        },
+        {
+          "block": 10,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 3266774
+        },
+        {
+          "block": 11,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 2590222
+        },
+        {
+          "block": 11,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 4316990
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "prefix": 256,
+      "decode": 32,
+      "width": 64,
+      "heads": 4,
+      "max_abs_error": {
+        "reproject": 3.725290298461914e-08,
+        "reuse": 3.725290298461914e-08
+      },
+      "trials": [
+        {
+          "block": 0,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3997428
+        },
+        {
+          "block": 0,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2267235
+        },
+        {
+          "block": 1,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 1972599
+        },
+        {
+          "block": 1,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 3252402
+        },
+        {
+          "block": 2,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 1755361
+        },
+        {
+          "block": 2,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 3350411
+        },
+        {
+          "block": 3,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3873451
+        },
+        {
+          "block": 3,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2180534
+        },
+        {
+          "block": 4,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3687960
+        },
+        {
+          "block": 4,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2245121
+        },
+        {
+          "block": 5,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 4037708
+        },
+        {
+          "block": 5,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3170074
+        },
+        {
+          "block": 6,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 5082317
+        },
+        {
+          "block": 6,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 3689242
+        },
+        {
+          "block": 7,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 3186252
+        },
+        {
+          "block": 7,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 4611024
+        },
+        {
+          "block": 8,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 4585796
+        },
+        {
+          "block": 8,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2246893
+        },
+        {
+          "block": 9,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 1812878
+        },
+        {
+          "block": 9,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 3301718
+        },
+        {
+          "block": 10,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 1671895
+        },
+        {
+          "block": 10,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 3927773
+        },
+        {
+          "block": 11,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 2684004
+        },
+        {
+          "block": 11,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 5416121
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "prefix": 16,
+      "decode": 32,
+      "width": 64,
+      "heads": 4,
+      "max_abs_error": {
+        "reproject": 7.450580596923828e-08,
+        "reuse": 7.450580596923828e-08
+      },
+      "trials": [
+        {
+          "block": 0,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3863124
+        },
+        {
+          "block": 0,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2621779
+        },
+        {
+          "block": 1,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 2803635
+        },
+        {
+          "block": 1,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 2837656
+        },
+        {
+          "block": 2,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 2921172
+        },
+        {
+          "block": 2,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2773408
+        },
+        {
+          "block": 3,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 2817425
+        },
+        {
+          "block": 3,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 2969806
+        },
+        {
+          "block": 4,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 3000623
+        },
+        {
+          "block": 4,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2786449
+        },
+        {
+          "block": 5,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 3290560
+        },
+        {
+          "block": 5,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 2881522
+        },
+        {
+          "block": 6,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 2905318
+        },
+        {
+          "block": 6,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2849674
+        },
+        {
+          "block": 7,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 3101023
+        },
+        {
+          "block": 7,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 2346484
+        },
+        {
+          "block": 8,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 1954993
+        },
+        {
+          "block": 8,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 1556982
+        },
+        {
+          "block": 9,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 1712516
+        },
+        {
+          "block": 9,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 2117008
+        },
+        {
+          "block": 10,
+          "order": 0,
+          "method": "reuse",
+          "time_ns": 1838106
+        },
+        {
+          "block": 10,
+          "order": 1,
+          "method": "reproject",
+          "time_ns": 1843223
+        },
+        {
+          "block": 11,
+          "order": 0,
+          "method": "reproject",
+          "time_ns": 1639806
+        },
+        {
+          "block": 11,
+          "order": 1,
+          "method": "reuse",
+          "time_ns": 1400285
+        }
+      ]
+    }
+  ],
+  "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+  "end_utc": "2026-11-24T11:05:54.425008+00:00"
+}

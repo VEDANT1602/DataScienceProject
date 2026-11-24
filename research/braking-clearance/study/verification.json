@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-24",
+  "platform": "Linux x86_64",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "matplotlib": "3.10.8",
+  "source_sha256": "7efb0efc8e1bca71c824cfb264b9e7af0cf9ce4cfb85dce81fa8036ada577f6a",
+  "original_full_experiment_rerun": true,
+  "original_csv_comparison": {
+    "results/by_delay.csv": {
+      "rows": 3,
+      "byte_identical": true,
+      "maximum_absolute_numeric_difference": 0.0,
+      "columns_with_differences": []
+    },
+    "results/dynamics_verification.csv": {
+      "rows": 40,
+      "byte_identical": true,
+      "maximum_absolute_numeric_difference": 0.0,
+      "columns_with_differences": []
+    },
+    "results/factorial.csv": {
+      "rows": 2916,
+      "byte_identical": true,
+      "maximum_absolute_numeric_difference": 0.0,
+      "columns_with_differences": []
+    },
+    "results/uncertainty.csv": {
+      "rows": 10000,
+      "byte_identical": false,
+      "maximum_absolute_numeric_difference": 2.842170943040401e-14,
+      "columns_with_differences": [
+        "actual_gap_m",
+        "bounded_extra_gap_m",
+        "bounded_gap_m",
+        "nominal_gap_m"
+      ]
+    },
+    "results/verification.csv": {
+      "rows": 200,
+      "byte_identical": true,
+      "maximum_absolute_numeric_difference": 0.0,
+      "columns_with_differences": []
+    },
+    "results/witness_trajectory.csv": {
+      "rows": 2001,
+      "byte_identical": false,
+      "maximum_absolute_numeric_difference": 7.105427357601002e-15,
+      "columns_with_differences": [
+        "closure_m",
+        "endpoint_plus_1m_gap_m",
+        "xl_m"
+      ]
+    }
+  },
+  "new_independent_bisection_results": "ordering-audit.json",
+  "observed_highway_summary": "observed/observed-summary.json"
+}

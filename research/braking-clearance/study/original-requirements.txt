@@ -1,0 +1,3 @@
+# Reference experiment dependencies; the core functions and smoke check use Python's standard library.
+numpy==1.26.0
+matplotlib==3.7.3

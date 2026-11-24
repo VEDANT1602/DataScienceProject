@@ -1,0 +1,14 @@
+{
+  "source_commit": "2da723d76dc465a081b29d40a67f512fc5e40c5c",
+  "files": {
+    "study.py": "7efb0efc8e1bca71c824cfb264b9e7af0cf9ce4cfb85dce81fa8036ada577f6a",
+    "requirements.txt": "37b08ac6c9029fb1cd7a0c5af78c9db91c6fd2607bf0bacd7b1da138d14c4008",
+    "results/summary.json": "26c00d4f1662c907effc22598d417e410ac2620981f7c7cc37bdffc0af873417",
+    "results/by_delay.csv": "f0446895b8960ac9e3e86fc4b26647ff768fef921ea69f326459622cd9735956",
+    "results/dynamics_verification.csv": "57db3ad04993b1507d7693b86cf2cace8335f4e347bf5419b7fc99063f4bf5b2",
+    "results/factorial.csv": "f5ef7275a01431e4a0741838adf7f2621d9fe4ef3978496ebbe47428f4466ba9",
+    "results/uncertainty.csv": "7cb5149add4130425c5ac5c7617d3086e9d4651212cb6aa75bac7aba6cfcadd8",
+    "results/verification.csv": "290a3b14af5f6e43f9f9f8f26b095811bb71b0379ab24756ae5411acc5579826",
+    "results/witness_trajectory.csv": "55a18a1be39b5f187f94e593fa3bd5af0d6ee5f9d573792b0cbd234e0375fd15"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "factorial": {
+    "groups": [
+      {
+        "cap_order": "F<=L",
+        "onset_order": "F<=L",
+        "cases": 1296,
+        "above_1mm": 0,
+        "above_1m": 0,
+        "maximum_m": 0.0,
+        "maximum_case": 2915
+      },
+      {
+        "cap_order": "F<=L",
+        "onset_order": "F>L",
+        "cases": 648,
+        "above_1mm": 29,
+        "above_1m": 1,
+        "maximum_m": 1.229915038686082,
+        "maximum_case": 1437
+      },
+      {
+        "cap_order": "F>L",
+        "onset_order": "F<=L",
+        "cases": 648,
+        "above_1mm": 279,
+        "above_1m": 156,
+        "maximum_m": 20.864999999999988,
+        "maximum_case": 2367
+      },
+      {
+        "cap_order": "F>L",
+        "onset_order": "F>L",
+        "cases": 324,
+        "above_1mm": 159,
+        "above_1m": 79,
+        "maximum_m": 14.941874999999996,
+        "maximum_case": 2370
+      }
+    ],
+    "maximum_disagreement_m": 8.526512829121202e-14,
+    "instant_above_1m": 1087,
+    "instant_excess_above_1m": 715
+  },
+  "uncertainty": {
+    "regimes": {
+      "inside_declared_bounds": {
+        "cases": 5000,
+        "nominal_failures": 1621,
+        "corner_failures": 0,
+        "average_increment_m": 14.651068330299577
+      },
+      "outside_declared_bounds": {
+        "cases": 5000,
+        "nominal_failures": 4858,
+        "corner_failures": 4843,
+        "average_increment_m": 15.026693607711389
+      }
+    },
+    "maximum_disagreement_m": 8.526512829121202e-14
+  }
+}
